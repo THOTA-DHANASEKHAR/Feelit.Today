@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Learnit.today</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!---bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- font-styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+    <!-------------style file--------------------->
+    <link rel="stylesheet" href="style.css">
+
+    <!--<script src="myscript.js"></script> -->
+
+</head>
+<body>
+    <section id="navigation_bar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/LOGO.png" alt="tds" style="width:40px; " class="rounded-pill"><b>&#160; LearnIt.today</b></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="toggler-icon top-bar"></span><span class="toggler-icon middle-bar"></span><span class="toggler-icon bottom-bar"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" >
+        <ul class="navbar-nav  mb-2 mb-lg-0" id="navlist">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="Home_Body()">   <b class="nav_name">&#160;&#160;HOME&#160;&#160;</b></a></li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="JOBS()">   <b class="nav_name">&#160;&#160;JOBS&#160;&#160;</b></a></li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="INTERVIEW()">   <b class="nav_name">&#160;&#160;INTERVIEW&#160;&#160;</b></a></li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="learning()"> <b class="nav_name">&#160;&#160;LEARN&#160;&#160;</b></a></li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="BOOKS()"> <b class="nav_name">&#160;&#160;BOOKS&#160;&#160;</b></a></li>
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><a class="nav-link" onclick="LOGIN()" data-bs-toggle="modal" data-bs-target="#sign-in">      <b class="nav_name">&#160;&#160;SIGN IN&#160;&#160;</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</section>
+            <!---NAVIGATION BAR END---->
+<section style="top: 9vh;" id="Home_Body">
+<div class="Index_image" id="laptop" style="display:none;">
+    <img src="images/Index_1.jpg" alt="home" style="width:100%; height:100vh;">
+    <div style="position: absolute; top: 50%; left: 35%;transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.5); padding:2% 3%;">
+        <h1 style="font-size:5vw;">Spread your wings and let your dreams take flight</h1>
+    </div>
+    <div style="position: absolute; top: 85%; left: 50%;transform: translate(-50%, -50%);background: rgba(0, 0, 0, 0.5); color: #f1f1f1;">
+    </div>
+</div>
+
+<div class="Index_image" id="mobile" style="display:none;">
+    <img src="images/Index_2.jpg" alt="home" style="width:100%; height:100vh;">
+    <div style="position: absolute; top: 30%; background: rgba(0, 0, 0, 0.5);  padding:10% 5%;">
+        <h1 style="font-size:36px; text-shadow: 2px 2px 4px #000000; color: white;">Spread your wings and let your dreams take flight!</h1>
+    </div>
+    <div style="position: absolute; top: 80%; left: 50%;transform: translate(-50%, -50%);">
+    </div>
+</div>
+</section><br>
+<section class="container-fluid" style="background-color:white;"><br>
+    <div class="container-fluid" >
+        <div class="container" id="learning">
+            <div class="text-center">
+                <h1 class="mb-5"><br>Popular Courses<hr></h1>
+            </div>
+            
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/python.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">RS 449.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star "></small>
+                                <small>(1203)</small>
+                            </div>
+                            <h5 class="mb-4">Python Programming Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>thota</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>10.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/Hacking.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">RS 799.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star"></small>
+                                <small class="fa fa-star "></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Ethical Hacking Course for Beginners Zero to Hero</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Nandha</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>9.00 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>430 Students</small>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/cloud.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">Rs 649.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Basics of cloud computing Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>sai kumar</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>14.9 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>730 Students</small>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/web.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">RS 340.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star"></small>
+                                <small class="fa fa-star"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">MERAN stack web development</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Guna</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>19 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>3054 Students</small>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/ai.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">RS890.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Artifical Inteligence course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Srinadh</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>5.45 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>730 Students</small>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/bc.png" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">RS 549.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star "></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Block chain Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>dhana</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>4.19 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>370 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="images/cloud.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">Rs 649.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Basics of cloud computing Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>sai kumar</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>14.9 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>730 Students</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+    <section id="categorey">
+    <div class="row bgc"  style=" padding:2% 5% 1% 5%;">
+        <div class="text-center">
+            <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+             <h1 class="mb-5">Our Service<hr></h1>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Skilled Instructors</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Online Classes</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Home Projects</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Book Library</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+                <h1 class="mb-5">Explore By Category<hr></h1>
+            </div>
+        <div class="col-md-3 p-3 categorey1" onclick="JOBS()"><div class="categorey2"><img class="categorey3" src="images/C_FJO.jpg"> <div class="categorey4">Fresher Jobs                 </div></div></div>
+        <div class="col-md-3 p-3 categorey1" onclick="JOBS()"><div class="categorey2"><img class="categorey3" src="images/C_GOVT.jpg"><div class="categorey4">Government                   </div></div></div>
+        <div class="col-md-3 p-3 categorey1" onclick="JOBS()"><div class="categorey2"><img class="categorey3" src="images/C_MI.jpg">  <div class="categorey4">Manufacturing and Production </div></div></div>
+        <div class="col-md-3 p-3 categorey1" onclick="JOBS()"><div class="categorey2"><img class="categorey3" src="images/C_SOFT.jpg"><div class="categorey4">Software                     </div></div></div>
+    </div>
+
+    <!-- Contact Start -->
+    <div class="container">
+        <div class="container">
+            <div class="text-center">
+
+                <h1 class="mb-5"><br>Contact Us<hr></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Get In Touch</h5>
+                    <p><br>Plase feel free to reachout us for any enquirey and suggestions! <br><br></p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">123 Street, chennai, INDAI</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+949595 4994</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope-open text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">TDS@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 ">
+                    <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.701108899087!2d80.24612617473483!3d12.990959087326145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525da07313c21d%3A0xe196a09a444d0d7f!2sLikewize!5e0!3m2!1sen!2sin!4v1685333711888!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 ">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+<br>
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+             <h1 class="mb-5" style="text-align:center;">About Us<hr></h1>
+            <div class="row g-5">
+
+                <div class="col-lg-6" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="images/about.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="mb-4">Welcome to LearnIT.Today</h1>
+                    <p class="mb-4">Welcome to LearnIT.Today E-Learning Platform, where knowledge meets convenience. We provide a diverse selection of online courses, tailored to meet the needs of learners worldwide. </p>
+                    <p class="mb-4">Our platform offers interactive learning materials, expert instructors, and a user-friendly interface for an engaging educational experience. Join our community, expand your skills, and unlock your potential at LearnIT.Today E-Learning Platform.</p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center ">
+                <h1 class="mb-5">Expert Instructors<hr></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="images/staff-1.png" alt="" style="width: 100%; height:100%">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">sai Kumar</h5>
+                            <small>Web development</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="images/staff-2.png" alt="" style="width: 100%; height:100%" >
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">dathu</h5>
+                            <small>marcketing</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="images/staff-3.png" alt="" style="width: 100%; height:100%">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">srinad</h5>
+                            <small>banking</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="images/staff-4.png" alt="" style="width: 100%; height:100%">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Rakesh</h5>
+                            <small>testing</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+<br>
+ <!-- Testimonial Start -->
+        <div class="container py-5 ">
+            <div class="container">
+                <h1 class="text-center mb-5">Our Students Say!!!<hr></h1>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="images/staff-3.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">srinadh</h5>
+                                
+                                <p><small>Human Resourse</small><hr>excellent content and interactive materials and high-quality learning.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="images/staff-1.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">C Guna</h5>
+                                
+                                <p><small>Block chain</small><hr>making it a top choice for flexible and high-quality learning.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="images/staff-3.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">sekhar</h5>
+                                
+                                <p><small>Digital Marcketing</small><hr>Learning offers diverse courses with excellent content and interactive materials</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="images/staff-4.png" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">muni</h5>
+                                
+                                <p><small>fullstack</small><hr>Learning offers diverse courses with flexible Timing and high-quality learning.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+<br>
+</section>
+
+</section>
+<section id="JOBS" style="display:none; padding-top:9vh; background-color:white;" class="container-fluid">
+    <!--------------------------display laptop---------------------------------->
+    <section class="container-fluid" id="laptop1" style="display:none; ">
+    <div class="row ">
+        <div class="col-3  ">
+            <div id="filter_Laptop" style="padding-left:20%"> </div>
+        </div>
+        <div class="col-9 " style="padding:0% 10% 2% 5%; "><br>
+            <h4 style="color:#317773;"><b><u>RESENT JOBS</u></b></h4><hr>
+            <!---block start--->
+            <div class="p-3"  onclick="Job_Dis()" >
+                <div class="row Lap_Body_overview" >
+                    <div class="col-2 rounded" >
+                        <img class="border rounded Lap_Body_overview_img" src="images/Google.png" alt="company logo">
+                    </div>
+                    <div class=" col-10 ">
+                        <h4 class="mb-3">testing&#160;&#160;|&#160;&#160;GOOGLE</h4>
+                        <p>Google is currently hiring a Junior Django Developer with 0-2 years of experience and any degree qualification for a full-time position based in chennai,  Banglore and The salary offered for this role is 45 LPA. posted on 23/2/2023</p>
+                    </div>
+                </div>
+            </div>
+            <!---block start--->
+            <!---block start--->
+            <div class="p-3"  onclick="Job_Dis()" >
+                <div class="row Lap_Body_overview" >
+                    <div class="col-2 rounded" >
+                        <img class="border rounded Lap_Body_overview_img" src="images/Google.png" alt="company logo">
+                    </div>
+                    <div class=" col-10 ">
+                        <h4 class="mb-3">devopes&#160;&#160;|&#160;&#160;GOOGLE</h4>
+                        <p>Google is currently hiring a Junior Django Developer with 0-2 years of experience and any degree qualification for a full-time position based in chennai,  Banglore and The salary offered for this role is 45 LPA. posted on 23/2/2023</p>
+                    </div>
+                </div>
+            </div>
+            <!---block start--->
+            <!---block start--->
+            <div class="p-3"  onclick="Job_Dis()">
+                <div class="row Lap_Body_overview" >
+                    <div class="col-2 rounded" >
+                        <img class="border rounded Lap_Body_overview_img" src="images/Google.png" alt="company logo">
+                    </div>
+                    <div class=" col-10 text-start ps-4 ">
+                        <h4 class="mb-3">network&#160;&#160;|&#160;&#160;GOOGLE</h4>
+                        <p>Google is currently hiring a Junior Django Developer with 0-2 years of experience and any degree qualification for a full-time position based in chennai,  Banglore and The salary offered for this role is 45 LPA. posted on 23/2/2023</p>
+                    </div>
+                </div>
+            </div>
+            <!---block start--->
+        </div>
+    </div>
+    </section><!----laptop end--->
+
+    <!--------------------------display mobile---------------------------------->
+    <section  class="container-fluid bgc" id="mobile1" style="display:none;">
+    <div class="row bgc" style=" padding-top:3%;">
+        <div class="col-6 float-left">
+          <h4 style="color:#317773; ">&nbsp;&nbsp;<b><u>RESENT JOBS</u></b></h4></div>
+        <div class="col-6 text-end">
+            <h4 class="btn" onclick="openNav()"><b><i class="bi bi-funnel " style="cursor: pointer; "></i>FILTER&nbsp;&nbsp;</b></h4>
+        </div>
+    </div>
+    <!--------------importing filter------------------>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div id="filter_mobile" style=" padding:0% 10% 10% 10%; cursor: pointer;"><hr></div>
+    </div>
+
+    <div class="row"><hr>
+        <!---main menu start--->
+        <div class="col-md-3 " style="border: none;">
+          <div class="card" style=" border: none; box-shadow: 2px 3px 3px 2px #C2C2C2; cursor: pointer;" onclick="Job_Dis()" >
+            <div class="card-header  d-flex justify-content-between" style="border-bottom: 1px solid black;"><h5 style="margin: 0"><b>NETWORK ENGINEER</b> </h5>
+              <div class="dropdown" style="float:right;"><b class="dropbtn "><i class="bi bi-three-dots-vertical share " style="color: black;"></i></b>
+                <div class="dropdown-content">
+                  <a href="#"><i class="bi bi-front"></i>&nbsp;&nbsp;CopyLink</a>
+                  <a href="#"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share</a>
+                  <a href="#"><i class="bi bi-bookmarks-fill"></i>&nbsp;&nbsp;Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body " style="padding-bottom: 0px; ">
+              <div class="row content"  style="padding-bottom: 0px;">
+                <div class="col-3 " style="padding: 2% 2% 2% 2%;"><img class="img-fluid" src="images/LOGO.png" alt="Logo" style="width: 100%; height:100% "></div>
+                <div class="col-1 "><b><i class="bi bi-buildings" ></i> </b><b><i class="bi bi-geo-alt"></i> </b><b><i class="bi bi-currency-rupee"></i> </b></div>
+                <div class="col-8 "><span> Cognizant  </span><br><span> Banglore   </span><br><span> Upto 12 LPA</span></div>
+              </div>
+              <div>
+                <div class="row " style="padding-top: 0%; padding-bottom: 0% ; margin-bottom: 0;">
+                  <div class="col p-2 d-flex justify-content-start" ><i class="bi bi-briefcase"></i>&nbsp;freshers</div>
+                  <div class="col p-2 d-flex justify-content-end" ><i class="bi bi-clock"></i>&nbsp;01-01-2001</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div><br>
+        <!---main menu end--->
+
+        <!---main menu start--->
+        <div class="col-md-3 " style="border: none;">
+          <div class="card" style=" border: none; box-shadow: 2px 3px 3px 2px #C2C2C2; cursor: pointer;" onclick="Job_Dis()" id="bs">
+            <div class="card-header  d-flex justify-content-between" style="border-bottom: 1px solid black;"><h5 style="margin: 0"><b>NETWORK ENGINEER</b> </h5>
+              <div class="dropdown" style="float:right;"><b class="dropbtn "><i class="bi bi-three-dots-vertical share " style="color: black;"></i></b>
+                <div class="dropdown-content">
+                  <a href="#"><i class="bi bi-front"></i>&nbsp;&nbsp;CopyLink</a>
+                  <a href="#"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share</a>
+                  <a href="#"><i class="bi bi-bookmarks-fill"></i>&nbsp;&nbsp;Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body " style="padding-bottom: 0px; ">
+              <div class="row content"  style="padding-bottom: 0px;">
+                <div class="col-3 " style="padding: 2% 2% 2% 2%;"><img class="img-fluid" src="images/LOGO.png" alt="Logo" style="width: 100%; height:100% "></div>
+                <div class="col-1 "><b><i class="bi bi-buildings" ></i> </b><b><i class="bi bi-geo-alt"></i> </b><b><i class="bi bi-currency-rupee"></i> </b></div>
+                <div class="col-8 "><span> Cognizant  </span><br><span> Banglore   </span><br><span> Upto 12 LPA</span></div>
+              </div>
+              <div>
+                <div class="row " style="padding-top: 0%; padding-bottom: 0% ; margin-bottom: 0;">
+                  <div class="col p-2 d-flex justify-content-start" ><i class="bi bi-briefcase"></i>&nbsp;freshers</div>
+                  <div class="col p-2 d-flex justify-content-end" ><i class="bi bi-clock"></i>&nbsp;01-01-2002</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div><br>
+        <!---main menu end--->
+         <!---main menu start--->
+        <div class="col-md-3 " style="border: none;">
+          <div class="card" style=" border: none; box-shadow: 2px 3px 3px 2px #C2C2C2; cursor: pointer;" onclick="Job_Dis()" id="bs">
+            <div class="card-header  d-flex justify-content-between" style="border-bottom: 1px solid black;"><h5 style="margin: 0"><b>NETWORK ENGINEER</b> </h5>
+              <div class="dropdown" style="float:right;"><b class="dropbtn "><i class="bi bi-three-dots-vertical share " style="color: black;"></i></b>
+                <div class="dropdown-content">
+                  <a href="#"><i class="bi bi-front"></i>&nbsp;&nbsp;CopyLink</a>
+                  <a href="#"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share</a>
+                  <a href="#"><i class="bi bi-bookmarks-fill"></i>&nbsp;&nbsp;Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body " style="padding-bottom: 0px; ">
+              <div class="row content"  style="padding-bottom: 0px;">
+                <div class="col-3 " style="padding: 2% 2% 2% 2%;"><img class="img-fluid" src="images/LOGO.png" alt="Logo" style="width: 100%; height:100% "></div>
+                <div class="col-1 "><b><i class="bi bi-buildings" ></i> </b><b><i class="bi bi-geo-alt"></i> </b><b><i class="bi bi-currency-rupee"></i> </b></div>
+                <div class="col-8 "><span> Cognizant  </span><br><span> Banglore   </span><br><span> Upto 12 LPA</span></div>
+              </div>
+              <div>
+                <div class="row " style="padding-top: 0%; padding-bottom: 0% ; margin-bottom: 0;">
+                  <div class="col p-2 d-flex justify-content-start" ><i class="bi bi-briefcase"></i>&nbsp;freshers</div>
+                  <div class="col p-2 d-flex justify-content-end" ><i class="bi bi-clock"></i>&nbsp;01-01-2002</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div><br>
+        <!---main menu end--->
+         <!---main menu start--->
+        <div class="col-md-3 " style="border: none;">
+          <div class="card" style=" border: none; box-shadow: 2px 3px 3px 2px #C2C2C2; cursor: pointer;" onclick="Job_Dis()" id="bs">
+            <div class="card-header  d-flex justify-content-between" style="border-bottom: 1px solid black;"><h5 style="margin: 0"><b>NETWORK ENGINEER</b> </h5>
+              <div class="dropdown" style="float:right;"><b class="dropbtn "><i class="bi bi-three-dots-vertical share " style="color: black;"></i></b>
+                <div class="dropdown-content">
+                  <a href="#"><i class="bi bi-front"></i>&nbsp;&nbsp;CopyLink</a>
+                  <a href="#"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share</a>
+                  <a href="#"><i class="bi bi-bookmarks-fill"></i>&nbsp;&nbsp;Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body " style="padding-bottom: 0px; ">
+              <div class="row content"  style="padding-bottom: 0px;">
+                <div class="col-3 " style="padding: 2% 2% 2% 2%;"><img class="img-fluid" src="images/LOGO.png" alt="Logo" style="width: 100%; height:100% "></div>
+                <div class="col-1 "><b><i class="bi bi-buildings" ></i> </b><b><i class="bi bi-geo-alt"></i> </b><b><i class="bi bi-currency-rupee"></i> </b></div>
+                <div class="col-8 "><span> Cognizant  </span><br><span> Banglore   </span><br><span> Upto 12 LPA</span></div>
+              </div>
+              <div>
+                <div class="row " style="padding-top: 0%; padding-bottom: 0% ; margin-bottom: 0;">
+                  <div class="col p-2 d-flex justify-content-start" ><i class="bi bi-briefcase"></i>&nbsp;freshers</div>
+                  <div class="col p-2 d-flex justify-content-end" ><i class="bi bi-clock"></i>&nbsp;01-01-2002</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div><br>
+        <!---main menu end--->
+         <!---main menu start--->
+        <div class="col-md-3 " style="border: none;">
+          <div class="card" style=" border: none; box-shadow: 2px 3px 3px 2px #C2C2C2; cursor: pointer;" onclick="Job_Dis()" id="bs">
+            <div class="card-header  d-flex justify-content-between" style="border-bottom: 1px solid black;"><h5 style="margin: 0"><b>NETWORK ENGINEER</b> </h5>
+              <div class="dropdown" style="float:right;"><b class="dropbtn "><i class="bi bi-three-dots-vertical share " style="color: black;"></i></b>
+                <div class="dropdown-content">
+                  <a href="#"><i class="bi bi-front"></i>&nbsp;&nbsp;CopyLink</a>
+                  <a href="#"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share</a>
+                  <a href="#"><i class="bi bi-bookmarks-fill"></i>&nbsp;&nbsp;Save</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body " style="padding-bottom: 0px; ">
+              <div class="row content"  style="padding-bottom: 0px;">
+                <div class="col-3 " style="padding: 2% 2% 2% 2%;"><img class="img-fluid" src="images/LOGO.png" alt="Logo" style="width: 100%; height:100% "></div>
+                <div class="col-1 "><b><i class="bi bi-buildings" ></i> </b><b><i class="bi bi-geo-alt"></i> </b><b><i class="bi bi-currency-rupee"></i> </b></div>
+                <div class="col-8 "><span> Cognizant  </span><br><span> Banglore   </span><br><span> Upto 12 LPA</span></div>
+              </div>
+              <div>
+                <div class="row " style="padding-top: 0%; padding-bottom: 0% ; margin-bottom: 0;">
+                  <div class="col p-2 d-flex justify-content-start" ><i class="bi bi-briefcase"></i>&nbsp;freshers</div>
+                  <div class="col p-2 d-flex justify-content-end" ><i class="bi bi-clock"></i>&nbsp;01-01-2002</div>
+                </div>
+              </div>
+            </div>
+          </div><br>
+        </div><br>
+        <!---main menu end--->
+    </div>
+    </section>  
+</section>
+
+ <section class="container-fluid " style="padding:5%; background-color:white; display:none;" id="BOOKS" >
+    <div class="row d-flex justify-content-around" style="padding-top:9vh;">
+        <h1>Trending Books</h1><hr>
+       <div style="padding: 0% 3% 0% 3%;">
+          <form action="" class="search_form" >
+            <input class="search_input" type="search" placeholder="Search here ...">
+            <i class="fa fa-search search_icon">&nbsp;Find</i>
+          </form><br>
+        </div>
+
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/AI.jpg" alt="AI"          class="Img_book"></a><div class="Img_content"><h6>Artifical Intiligence</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/aws.jpg" alt="AWS"         class="Img_book"></a><div class="Img_content"><h6>AWS</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/block_chain.jpg" alt="blockchain" class="Img_book"></a><div class="Img_content"><h6>block chain</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/devopes.jpg" alt="devopes"     class="Img_book"></a><div class="Img_content"><h6>devopes</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/DM.jpg" alt="digital marketing"          class="Img_book"></a><div class="Img_content"><h6>digital marketing</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/ML.jpg" alt="AI"          class="Img_book"></a><div class="Img_content"><h6>Heading</h6></div></div></div>
+      
+
+      <h1><br>programming Books</h1><hr>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/C.jpg" alt="C programming"           class="Img_book"></a><div class="Img_content"><h6>C programming</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/java.jpg" alt="java Programming"        class="Img_book"></a><div class="Img_content"><h6>java Programming</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/js.jpg" alt="Java Script"          class="Img_book"></a><div class="Img_content"><h6>Java Script</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/python.jpg" alt="Python Programming"      class="Img_book"></a><div class="Img_content"><h6>Python Programming</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/SQL.jpg" alt="SQL"         class="Img_book"></a><div class="Img_content"><h6>SQL</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/go.jpg" alt="GO"          class="Img_book"></a><div class="Img_content"><h6>GO</h6></div></div></div>
+
+      <h1><br>Technology Books</h1><hr>
+       <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/networking.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>Networking</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/5G.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>5G Technology</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/google_cloud.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>Google Colud</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/DSA.jpg" alt="AI"         class="Img_book"></a><div class="Img_content"><h6>Data Structures</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/webp.jpg" alt="AI"        class="Img_book"></a><div class="Img_content"><h6>Wen development</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/oracel.jpg" alt="AI"      class="Img_book"></a><div class="Img_content"><h6>oracel</h6></div></div></div>
+      
+      <h1><br>Hardware Books</h1><hr>
+       <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/edc.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>EDC</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/embeded_systems.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>embeded systems</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/MECHATRONICS.jpg" alt="AI"  class="Img_book"></a><div class="Img_content"><h6>MECHATRONICS</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/pic_Projects.jpg" alt="AI"         class="Img_book"></a><div class="Img_content"><h6>PIC Microcontroller</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/aurdino1.jpeg" alt="AI"        class="Img_book"></a><div class="Img_content"><h6>Aurdino</h6></div></div></div>
+      <div class="col-6 col-md-4 col-lg-2  p-4 d-flex justify-content-around"><div class="Img_container"><a href="books/python.pdf" download><img src="books/raspberry.png" alt="AI"      class="Img_book"></a><div class="Img_content"><h6>Raspberry</h6></div></div></div>
+      
+    </div>
+</section>
+
+<section class="container-fluid"  style="display:none;" id="Job_Dis">
+  <!------------------------------Home page end------------------------------------>
+<div style="padding-top: 9vh; ">
+
+    <div class="row" style="background-color:white;">
+
+        <div style=" padding:2%;" class="d-flex justify-content-center ">
+
+           <div class="d-flex align-items-center p-2 rounded ">
+                <img class="border rounded" src="images/Google.png" alt="" style="width: 100px; height: 100px; ">
+
+                <div class="text-start ps-4 ">
+                    <h4 class="mb-3">Go-To-Market Lead, Global Services Delivery</h4>
+                    <span><i class="bi bi-buildings" ></i>&#160;GOOGLE</span> |
+                    <span><i class="bi bi-person-gear"></i>&#160;Full Time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <br>
+<div style="top:8vh; ">
+    <div class="row" style="background-color:white;">
+        <div class="col-lg-4 " style="padding:3%;">
+              <div class="rounded p-3 mb-4" style="background-color:#e7f3fe;">
+                  <h3 class="mb-3" style="color:#2BAE66;"><u><b>Job Summery</b></u></h3>
+                <table style="margin-left: auto; margin-right: auto;">
+                    <tr><td class="titles"><i class="bi bi-briefcase text-dark"></i>            Experience    </td><td class="detail">: 0-2 years  </td></tr>
+                    <tr><td class="titles"><i class="bi bi-mortarboard-fill text-dark"></i>     Qualification </td><td class="detail">: Any degree </td></tr>
+                    <tr><td class="titles"><i class="bi bi-currency-rupee text-dark"></i>   Pakage:       </td><td class="detail">: 45 LPA    </td></tr>
+                    <tr><td class="titles"><i class="bi bi-geo-alt text-dark"></i>          Job Location  </td><td class="detail">: Gurgaon, Haryana, India   </td></tr>
+                    <tr><td class="titles"><i class="bi bi-clock text-dark"></i>                Posted on     </td><td class="detail">: 23/2/2023  </td></tr>
+                </table>
+            </div>
+
+            <div class="rounded p-3 mb-4 " style=" text-align: justify; text-justify: inter-word;background-color:#e7f3fe;">
+                    <h3 class="mb-3" style="color:#2BAE66;"><u><b>Company Detail</b></u></h3>
+                  <p class="m-0" >&#160;&#160;&#160;&#160;Google is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics. It has been referred to as "the most powerful company in the world" and one of the world's most valuable brands due to its market dominance, data collection, and technological advantages in the area of artificial intelligence. Its parent company Alphabet is considered one of the Big Five American information technology companies, alongside Amazon, Apple, Meta, and Microsoft.
+                  </p>
+            </div>
+
+            <div class="rounded p-3 mb-4 " style=" text-align: justify; text-justify: inter-word;background-color:#e7f3fe;">
+                <h5>Connect with us</h5><br>
+               <div class="d-flex justify-content-around">
+                <button type="button" class="btn" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-linkedin" style="color: white;"></i></button>
+                <button type="button" class="btn" style="background: #DD2A7b; border-radius: 10%;"><i class="bi bi-instagram" style="color: white;"></i></button>
+                <button type="button" class="btn" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-telegram" style="color: white;"></i></button>
+                <button type="button" class="btn" style="background: #28D146; border-radius: 10%;"><i class="bi bi-whatsapp" style="color: white;"></i></button>
+                <button type="button" class="btn" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-facebook" style="color: white;"></i></button>
+            </div>
+            </div>
+
+          </div>
+        <!---------------------------------------------->
+          <div class="col-lg-8 " style="padding:0 3% 0 3%; "><br><br>
+            <div class="mb-5">
+                <h3 class="mb-3" style="color:#2BAE66;"><u><b>Description</b></u></h3>
+                <p style="padding:0 5% 0 5%; text-align: justify;">&#160;&#160;
+                    As a Go-To-Market Lead for the Global Services Delivery (GSD), you will be responsible for leading the development and execution of Go-To-Market strategies for GSD and Technical Onboarding Centers (TOCs) products and services. In this role, you will work closely with cross-functional teams, including GSD leadership and Learning teams to develop and execute Go-To-Market plans for Generative AI, Migration Acceleration Center and Onboarding Center that drive business growth and increase customer adoption of the Google Cloud Platform (GCP) products and services.
+                </p>
+                <h3 class="mb-3" style="color:#2BAE66;"><u><b>Responsibility</b></u></h3>
+               <ul style="padding:0 5% 0 5%; text-align: justify;">
+                    <li>Develop and execute GSD Go-To-Market strategies for the Technical Onboarding Center and Generative AI products and services.</li>
+                    <li>Drive awareness and adoption of Generative AI learning programs internally and with partner.</li>
+                    <li>Develop partner enablement plans and drive capability building and communications.</li>
+                    <li>Work with stakeholders across the Google Cloud services organizations locally and globally, Sales teams, Account teams, partners and delivery center.</li>
+                    <li>Analyze and report on key metrics to measure the success of Go-To-Market activities.</li>
+                </ul>
+               <h3 class="mb-3" style="color:#2BAE66;"><u><b>Qualifications</b></u></h3>
+               <ul style="padding:0 5% 0 5%; text-align: justify;">
+                    <li>Analyze and report on key metrics to measure the success of Go-To-Market activities.</li>
+                    <li>2 years of experience in learning and business development roles. Experience with product positioning, pricing, and distribution strategies.</li>
+                    <li>Experience in customer engagement and driving customer satisfaction. Ability to manage budgets and timelines.</li>
+                    <li>Ability to communicate complex technical concepts to both technical and non-technical audiences.</li>
+                    <li>Ability to work in a fast-paced dynamic environment and manage multiple projects simultaneously.</li>
+                </ul>
+                <div class="success" style="background-color: #e7f3fe; text-align: justify; border-left: 6px solid #2196F3; border-top: 0.5px solid black;  border-right: 0.5px solid black; border-bottom: 0.5px solid black;padding:1%;">
+                <p><br><strong><i class="bi bi-info-square"> </i>Important key words: </strong> Python, Java, JavaScript, HTML, CSS, Bootstrap, Frameworks: Django, Pandas, Databases: MySQL, PostgreSQL, Tools: Git, AWS (EC2, Route 53, S3, VPC, IAM, certificate manager), Networking: Palo-alto Firewall, sliver-Peak SD-WAN, F5 BIG-IP, Cisco switch, Meraki Access Points.<br></p>
+                </div>
+                <br>
+                <br>
+                <button class="btn btn-primary w-100" type="submit">Apply Now&nbsp;&nbsp;<i class="bi bi-rocket"></i></button><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!----------------------------Interview Questions------------------------------------->
+<section style="font-family:'Times New Roman'; font-size:12pt; padding:5%; display:none; background-color:white;" class="container-fluid" id="INTERVIEW">
+
+<div >
+    <h1>Interview Questions</h1><hr>
+       <div style="padding: 0% 3% 0% 3%;">
+          <form action="" class="search_form" >
+            <input class="search_input" type="search" placeholder="Search here ...">
+            <i class="fa fa-search search_icon">&nbsp;Find</i>
+          </form><br>
+        <div class="container">
+           <button class="btn btn-success">python     </button>
+           <button class="btn btn-success">C language </button>
+           <button class="btn btn-success">Java       </button>
+           <button class="btn btn-success">HTML       </button>
+           <button class="btn btn-success">CSS        </button>
+           <button class="btn btn-success">Bootstrap  </button>
+           <button class="btn btn-success">JQuerey    </button>
+           <button class="btn btn-success">JavaScript </button>
+           <button class="btn btn-success">AWS        </button>
+           <button class="btn btn-success">AZURE      </button>
+           <button class="btn btn-success">SQL        </button>
+        </div>
+                <h1 class="mb-5"><br>Full stack developer Interview Questions<br></h1>
+            
+<ol>
+   <li><b>State some basic design element</b><br>Some of the basic elements of design are Line - a line mark made with any pen or brush or even any edge created when two shape meets Size - it is the area occupied by one shape with the other Texture- the surface of the shape - Smooth, soft, hard, glossy, and suchColor - The light reflected from the objects. The three characteristics of color are hue, value, and the intensity.<br><br></li>
+   <li><b>What is load balancing?</b><br>Load balancing is distribution of all the incoming network traffic all across the backendservers.<br><br></li>
+   <li><b>What npm stands for ?</b><br>Npm stands for Node Package Manager.<br><br></li>
+   <li><b>What is scope in JavaScript?</b><br>In JavaScript every function has its own scope. It is basically a collection of rules for how variables are accessed and variables itself<br><br></li>
+   <li><b>How are JavaScript and jQuery different?</b><br>JQuery is a library built with the JavaScript language, and JavaScript is the language itself.<br><br></li>
+   <li><b>What is Content Security Policy?</b><br>Content security Policy also known as CSP, is a header in HTML which lets the soiteoperators gain the whole control over the resources which are loading on the site.<br><br></li>
+   <li><b>What is Cross-Site Scripting (XSS)?</b><br>XSS, Cross-Site Scripting is an attack which takes place when any attacker uses a web application to send any malicious code, in the form of browser side script, to anotheruse<br><br></li>
+   <li><b>What is User Centered Design?</b><br>User-centered designs are those designs the designer solely focuses on which are according to the needs of users and them in every phase of designing.<br><br></li>
+   <li><b>What is callback hell?</b><br>JavaScript which uses callbacks and is hard to get the right intuitively. The callbacks which are stacked in the form of pyramid structure.<br><br></li>
+   <li><b>JavaScript which uses callbacks and is hard to get the right intuitively. The callbacks which are stacked in the form of pyramid structure.</b><br>The word Polymorphism means having many different forms. If we talk in object-oriented form, polymorphism refers to one interface, multiple functions.<br><br></li>
+   <li><b>What is Strict Mode?</b><br>A new feature of ECMAScript 5 is Strict mode which lets you place a function, or a program in a “strict” context of operating.<br><br></li>
+   <li><b>What is meant by the KISS principle?</b><br>KISS, a backronym of “Keep it simple, stupid”. Which was the principal design in the US Navy in 1960. The KISS principle states that the simpler the system the better it works.<br><br></li>
+   <li><b>What is Coercion in JavaScript?</b><br>The conversion of two different build-in Types of JavaScript is called Coercion. It comes in two forms, Explicit and implicit.<br><br></li>
+   <li><b>What is a grid system in CSS?</b><br>A structure which lets the content be placed both horizontally and vertically in a consistent and manageable way. There are two key components of the Grid system; Rows and Columns.<br><br></li>
+</ol>
+</div>
+</section>
+
+
+ <!--------------------------display filter---------------------------------->
+<section  style="display: none;" class="container-fluid" >
+<div id="filter"><br>
+    <h4 style="color:#317773;"><b><u><i class="bi bi-funnel">FILTER</i></u></b></h4><hr>
+
+      <div  class="filter-name d-flex justify-content-between "  data-bs-toggle="collapse" data-bs-target="#LOCATION" ><b>LOCATION</b><span ><i class="bi bi-chevron-down"></i></span></div>
+      <div id="LOCATION" class="collapse" style="padding-left:10%"><br>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-1" checked><label class="form-check-label" for="LOCATION-1">All</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-2"><label class="form-check-label" for="LOCATION-2">Bangalore</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-3"><label class="form-check-label" for="LOCATION-3">Chennai</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-4"><label class="form-check-label" for="LOCATION-4">Delhi</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-5"><label class="form-check-label" for="LOCATION-5">Hyderabad</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-6"><label class="form-check-label" for="LOCATION-6">Kolkata</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-7"><label class="form-check-label" for="LOCATION-7">Mumbai</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-8"><label class="form-check-label" for="LOCATION-8">Pune</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-9"><label class="form-check-label" for="LOCATION-9">Ahmedabad</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-10"><label class="form-check-label" for="LOCATION-10">Jaipur</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-11"><label class="form-check-label" for="LOCATION-11">Kochi</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-12"><label class="form-check-label" for="LOCATION-12">Chandigarh</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-13"><label class="form-check-label" for="LOCATION-13">Mysore</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-14"><label class="form-check-label" for="LOCATION-14">Trivandrum</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-15"><label class="form-check-label" for="LOCATION-15">Nagpur</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-16"><label class="form-check-label" for="LOCATION-16">Indore</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-17"><label class="form-check-label" for="LOCATION-17">Visakhapatnam</label></div>
+      <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="LOCATION-18"><label class="form-check-label" for="LOCATION-18">Chandigarh</label></div>
+    </div><hr>
+
+
+    <div  class="filter-name d-flex justify-content-between " data-bs-toggle="collapse" data-bs-target="#JOB-TYPE" ><b>JOB TYPE</b><span ><i class="bi bi-chevron-down"></i></span></div>
+    <div id="JOB-TYPE" class="collapse" style="padding-left:10%"><br>
+      <div class="form-check"><input class="form-check-input" type="radio" name="JOB-TYPE" id="all" checked><label class="form-check-label" for="all">All</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="JOB-TYPE" id="Full Time"><label class="form-check-label" for="Full Time">Full Time</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="JOB-TYPE" id="Part Time"><label class="form-check-label" for="Part Time">Part Time</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="JOB-TYPE" id="Internship"><label class="form-check-label" for="Internship">Internship</label></div>
+    </div><hr>
+
+    <div  class="filter-name d-flex justify-content-between " data-bs-toggle="collapse" data-bs-target="#Date-Posted" ><b>POSTED DATE</b><span ><i class="bi bi-chevron-down"></i></span></div>
+    <div id="Date-Posted" class="collapse" style="padding-left:10%"><br>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Date-Posted" id="Date-Posted-1" checked><label class="form-check-label" for="Date-Posted-1">All</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Date-Posted" id="Date-Posted-2"><label class="form-check-label" for="Date-Posted-2">Today</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Date-Posted" id="Date-Posted-3"><label class="form-check-label" for="Date-Posted-3">Past 3 days</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Date-Posted" id="Date-Posted-4"><label class="form-check-label" for="Date-Posted-4">Past Week</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Date-Posted" id="Date-Posted-5" ><label class="form-check-label" for="Date-Posted-5">Past Month</label></div>
+    </div><hr>
+
+    <div  class="filter-name d-flex justify-content-between "  data-bs-toggle="collapse" data-bs-target="#Qualificationbtn" ><b>QUALIFICATION</b><span ><i class="bi bi-chevron-down"></i></span></div>
+    <div id="Qualificationbtn" class="collapse" style="padding-left:10%"><br>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-1" checked><label class="form-check-label" for="Qualification-1">Phd</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-2"><label class="form-check-label" for="Qualification-2">ME / M-Tech</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-3"><label class="form-check-label" for="Qualification-3">BE / B-Tech</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-4"><label class="form-check-label" for="Qualification-4">Deploma</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-5" ><label class="form-check-label" for="Qualification-5">+12</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="Qualification" id="Qualification-6" checked><label class="form-check-label" for="Qualification-6">Any</label></div>
+    </div><hr>
+
+    <div  class="filter-name d-flex justify-content-between " data-bs-toggle="collapse" data-bs-target="#salarybtn" ><b>SALARY</b><span ><i class="bi bi-chevron-down"></i></span></div>
+    <div id="salarybtn" class="collapse" style="padding-left:10%"><br>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary" id="salary-1" checked><label class="form-check-label" for="salary-1">0-3 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-2" id="salary-2"><label class="form-check-label" for="salary-2">3-6 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary" id="salary-3"><label class="form-check-label" for="salary-3">6-10 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-4" id="salary-4"><label class="form-check-label" for="salary-4">10-15 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-5" id="salary-6"><label class="form-check-label" for="salary-6">15-20 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-4" id="salary-7"><label class="form-check-label" for="salary-7">20-25 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-4" id="salary-8"><label class="form-check-label" for="salary-8">25-50 LPA</label></div>
+      <div class="form-check"><input class="form-check-input" type="radio" name="salary-5" id="salary-9" ><label class="form-check-label" for="salary-9">above 50 LPA</label></div>
+    </div><hr>
+
+    <div  class="filter-name d-flex justify-content-between " data-bs-toggle="collapse" data-bs-target="#experiencebtn" ><b>EXPERIENCE</b><span ><i class="bi bi-chevron-down"></i></span></div>
+    <div id="experiencebtn" class="collapse" style="padding-right:10%;"><br>
+        <div class="form-check"><h5 id="print-experience">0 -YEARS</h5><input type="range" min="0" max="70" value="0" class="slider" id="experience" oninput="my_experience()" style="width: 100%;">
+        </div>
+    </div><hr><br>
+</div>
+        <!---filter end--->
+
+</section>
+
+<section class="container-fluid" >
+  <!----------------------------login----------->
+<div class="modal" id="sign-in">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><u>sign in</u></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+            <div class="form-group"><span><b>Username:</b></span>
+              <input type="email" class="form-control" id="email1" placeholder="Your email address...">
+            </div><br>
+
+            <div class="form-group">
+              <span><b>Password:</b></span>
+              <span class="float-end" id="in"><input type="checkbox" onclick="signin()" > &#160;<b>Show Password</b></span>
+                <span class="input-group-addon">
+                    <input type="password" class="form-control" id="password3" placeholder="Your password">&#160;
+                    </span>
+            </div><br>
+
+
+
+            <div class="text-center d-grid">
+              <button type="button" class="btn btn-success btn-block btn-round " >Login</button>
+            </div>
+          </form><br>
+          <div class="text-center" ><h4>or use a social network</h4></div>
+           <div class="social-media text-center" >
+            <button type="button" class="btn border border-3 border-white" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-linkedin" style="color: white;"></i></button>
+          <button type="button" class="btn border border-3 border-white" style="background: #dd4b39; border-radius: 10%;"><i class="bi bi-google" style="color: white;"></i></button>
+          <button type="button" class="btn border border-3 border-white" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-facebook" style="color: white;"></i></button>
+      </div>
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer d-block">
+        <span class="float-start">
+
+          <a href="#"  data-bs-toggle="modal" data-bs-target="#forgot-password" >Forgot Password?</a>
+
+        </span>
+
+        <span class="float-end">Not a member yet
+          <a href="#"  data-bs-toggle="modal" data-bs-target="#sign-up" > Sign Up</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-------------------------Sign Up--------------------------------------->
+
+<!-- The Modal -->
+<div class="modal" id="sign-up">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><u>sign up</u></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+            <div class="form-group"><span><b>Username:</b></span>
+              <input type="text" class="form-control" id="text1" placeholder="Enter full name">
+            </div><br>
+
+            <div class="form-group"><span><b>Mail id:</b></span>
+              <input type="email" class="form-control" id="email" placeholder="Enter email address">
+            </div><br>
+
+
+            <label  style="color:black">
+            <input type="checkbox" checked="checked" id="conform" name="conform" > Agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
+          </label><br><br>
+
+            <div class="text-center d-grid">
+              <button type="button" class="btn btn-success btn-block btn-round " >Sign Up</button>
+            </div>
+          </form><br>
+          <div class="text-center"><h4>or use a social network</h4></div>
+           <div class="social-media text-center">
+            <button type="button" class="btn border border-3 border-white" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-linkedin" style="color: white;"></i></button>
+          <button type="button" class="btn border border-3 border-white" style="background: #dd4b39; border-radius: 10%;"><i class="bi bi-google" style="color: white;"></i></button>
+          <button type="button" class="btn border border-3 border-white" style="background: #0088cc; border-radius: 10%;"><i class="bi bi-facebook" style="color: white;"></i></button>
+      </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer"><div class="signup-section">Having an account <a href="#" data-bs-toggle="modal" data-bs-target="#sign-in" class="text-info"> Sign in</a>.</div></div>
+
+    </div>
+  </div>
+</div>
+<!----------------------------Forgot Password---------------------------------->
+<!-- The Modal -->
+<div class="modal" id="forgot-password">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Reset password</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" >
+        <form>
+            <div class="form-group"><span><b>Enter your account mail id</b></span><br><br>
+              <input type="email" class="form-control" id="email2" placeholder="Your email address...">
+            </div><br>
+
+            <div class="text-center d-grid">
+              <button type="button" class="btn btn-success btn-block btn-round " data-bs-toggle="modal" data-bs-target="#OTP-sent">Continue</button>
+            </div>
+          </form><br>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sign-in">Login</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!---------------------------ENTER OTP------------------------------------->
+<div class="modal" id="OTP-sent" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+         <h4 class="modal-title text-center">Please enter the OTP</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body" >
+        <form style="text-align: center"  ><br>
+          <div> <span>A code has been sent to</span> <small>sekh*******@gmail.com</small>
+            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+              <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" style="width: 40px; height: 40px" />
+              <input class="m-2 text-center form-control rounded" type="text" id="second" maxlength="1" style="width: 40px; height: 40px" />
+              <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" style="width: 40px; height: 40px"/>
+              <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" style="width: 40px; height: 40px" />
+              <input class="m-2 text-center form-control rounded" type="text" id="fifth" maxlength="1" style="width: 40px; height: 40px"/>
+              <input class="m-2 text-center form-control rounded" type="text" id="sixth" maxlength="1" style="width: 40px; height: 40px"/>
+            </div>
+            <button type="button" class="btn btn-success btn-block btn-round " data-bs-toggle="modal" data-bs-target="#New_password">Continue</button><br> <br>
+            <div class="content d-flex justify-content-center align-items-center">
+              <span>Didn't get the code</span>
+              <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a>
+            </div>
+          </div>
+        </form><br>
+      </div>
+    </div>
+  </div>
+</div>
+<!-------------------------new password--------------------------------------->
+
+<!-- The Modal -->
+<div class="modal" id="New_password">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"><u>Set New Password</u></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+          <div> <span style="text-align: center" >Create a new password than contains minimim one Numer, special character, Uppercae, Lowercase and length should be 8 characters.</span><br><br><br>
+              <span><b>Password:</b></span>
+
+                <span class="input-group-addon">
+                    <input type="password" class="form-control" id="password1" placeholder="Your password">&#160;
+                    </span>
+            </div>
+
+            <div class="form-group"><span><b>Conforn Password:</b></span>
+                <span class="float-end" id="up"><input type="checkbox" onclick="signup()" > &#160;<b>Show Password</b></span>
+              <input type="password" class="form-control" id="password2" placeholder="Re-enter password">
+            </div><br><br>
+
+            <div class="text-center d-grid">
+              <button type="button" class="btn btn-success btn-block btn-round " >Set Password</button>
+            </div>
+                </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+<section>
+        <!---------------------------privacy policy------------------------------------->
+<div class="modal" id="privacy_policy" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+         <h4 class="modal-title text-center">privacy policy</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body p-4" >
+        <p>
+            At Feelit.today, we value and prioritize the privacy of our visitors. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our website. By accessing and using our website, you consent to the terms of this Privacy Policy.
+
+<br><br><h4>Information We Collect</h4>
+
+<b>Personal Information:</b> When you voluntarily provide it to us, we may collect personal information such as your name, email address, and any other details you provide through our contact forms or subscription options.
+
+<br><br><b>Usage Data:</b> We may collect non-personal information about your interactions with our website. This includes your IP address, browser type, device information, pages visited, and other similar data.
+
+<br><br><h4>Use of Collected Information</h4>
+
+Personal Information: We may use the personal information you provide to respond to your inquiries, provide requested services, send newsletters or updates <a href="">Blogs</a>, and enhance your overall experience on our website.
+
+Usage Data: We analyze the usage data to improve our website, understand user preferences, troubleshoot issues, and optimize content and services accordingly. This data is collected in an aggregated and anonymized form and does not personally identify you.
+
+<br><br><h4>Data Security</h4>
+We take reasonable measures to protect the security of your personal information. However, please be aware that no method of data transmission over the internet or electronic storage can be guaranteed to be completely secure.
+
+<br><br><h4>Third-Party Links</h4>
+Our website may contain links to third-party websites or services that are not operated or controlled by us. Once you leave our website, we have no control over the privacy policies or practices of those third parties. We encourage you to review their respective privacy policies before providing any personal information.
+
+<br><br><h4>Cookies</h4>
+We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. Cookies are small files stored on your device that allow us to recognize your preferences, track usage patterns, and provide personalized content. You have the option to accept or decline cookies. However, if you choose to disable cookies, some features of our website may not function properly.
+
+Updates to Privacy Policy
+We reserve the right to update or modify this Privacy Policy at any time. Any changes will be effective immediately upon posting the revised policy on our website. We encourage you to periodically review this page for the latest information on our privacy practices.
+
+<br><br><h4>Contact Us</h4>
+If you have any questions or concerns regarding our Privacy Policy or the handling of your personal information, please contact us at <a href="">contactus@feelit.today</a>.
+
+By continuing to use our website, you acknowledge that you have read and understood this Privacy Policy and consent to the collection, use, and disclosure of your personal information as described herein.
+
+Last Updated: 25-MAY-2023
+
+<br><br><h4>Disclaimer</h4>
+
+Please be advised that the job postings we share are sourced from external platforms, and while we make every effort to ensure their accuracy and availability, we cannot guarantee them. We encourage you to conduct your own thorough research before applying and to contact the employer directly if you have any questions or concerns.<br><br>
+
+Thank you for using our website as your go-to source for job notifications from various platforms. We strive to bring you the most up-to-date and relevant job postings to help you find your dream career. <br><br>
+
+ We value your feedback and suggestions and would be delighted to hear from you. Thank you for visiting our website, and we wish you the very best in your job search!
+       
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+    <div class="social-media" style="position:fixed; width:48px; height:192px; right: 0%; top:calc(80% - 98px);">
+    <button type="button" class="btn border border-3" style="background: #DD2A7b; border-color:#E6E6FA;"><i class="bi bi-instagram" style="color: white;"></i></button><br>
+    <button type="button" class="btn border border-3" style="background: #0088cc; border-color:#E6E6FA;"><i class="bi bi-telegram" style="color: white;"></i></button><br>
+    <button type="button" class="btn border border-3"  style="background: #28D146; border-color:#E6E6FA;"><i class="bi bi-whatsapp" style="color: white;"></i></button>
+</div>
+</section>
+
+
+
+
+
+</body>
+<footer style="padding:1%; background-color:#304146; font-family:Open Sans;Oswald " class=" text-light">
+<div class="row">
+    <div class="col-md-6 text-center text-md-start" >
+        <b>Copyright &copy; 2023 <a href="#">Feelit.today</a>, All rights reserved.</b><br>
+    </div>
+    <div class="col-md-6 text-center text-md-end" >
+        <a href="#" data-bs-toggle="modal" data-bs-target="#privacy_policy" style="text-decoration: none; color:white;">DISCLIMER</a>&nbsp;|&nbsp;
+        <a href="#" data-bs-toggle="modal" data-bs-target="#privacy_policy" style="text-decoration: none; color:white;">FOLLOW US</a>&nbsp;|&nbsp;
+        <a href="#" onclick="navigation_bar()" style="text-decoration: none; color:white;">HOME</a>&nbsp;|&nbsp;
+        <a href="#" data-bs-toggle="modal" data-bs-target="#privacy_policy" style="text-decoration: none; color:white;">COOKIES</a>&nbsp;|&nbsp;
+        <a href="#" data-bs-toggle="modal" data-bs-target="#privacy_policy" style="text-decoration: none; color:white;">HELP</a>&nbsp;|&nbsp;
+        <a href="#" data-bs-toggle="modal" data-bs-target="#privacy_policy" style="text-decoration: none; color:white;">SUBCRIBE</a>
+    </div>
+</div>
+
+    <script src="myscript.js"></script>
+</footer>
+</html>
