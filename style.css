@@ -138,7 +138,6 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto; 
- cursor: pointer;
 }
 /*---[side pannel filter mobile]---*/
 .sidepanel  {
@@ -338,4 +337,52 @@ background: transparent; /* make scrollbar transparent */
 
 .course-box img{
     border: 1px solid #d1dfdc;
+}
+    .profile-card {
+      margin-bottom: 20px;
+      text-align: center;
+      border-radius:2px;
+    }
+    .profile-image {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .profile-name {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .profile-role {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .social-icons li:last-child {
+      margin-right: 0;
+      margin-bottom:5%
+    }
+    .social-icons a {
+      color: #333;
+    }
+.profile-card {
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.profile-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
