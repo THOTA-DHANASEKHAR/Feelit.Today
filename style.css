@@ -83,9 +83,7 @@ a {
 .navbar-toggler.collapsed .toggler-icon {
     background-color: #777777;
 }
-#navlist{
-	text-align: center;
-}
+
 /* list hover effect color */ 
 #navlist a:hover {  
             color: #4285f4;
