@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>color picker</title>
+    <title>Color Code Picker:</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .copied {
+            background-color: #28a745 !important;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Color Picker</h1>
+        <h3 ><u>Color Code Picker</u></h3><br>
         <div class="form-group">
-            <input type="color" id="colorPicker" class="form-control form-control-lg" />
+            <input type="color" id="colorPicker" class="form-control form-control-lg" value="#000000" />
         </div>
         <div class="form-group">
             <label for="colorCode">HTML Color Code:</label>
-            <input type="text" id="colorCode" class="form-control form-control-lg" readonly />
+            <div class="input-group">
+                <input type="text" id="colorCode" class="form-control form-control-lg" readonly value="#000000" />
+                <div class="input-group-append">
+                    <button class="btn btn-primary" id="copyColorCode" data-copy-target="colorCode">
+                        Copy
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <label for="rgbCode">RGB Color Code:</label>
-            <input type="text" id="rgbCode" class="form-control form-control-lg" readonly />
+            <div class="input-group">
+                <input type="text" id="rgbCode" class="form-control form-control-lg" readonly value="0, 0, 0" />
+                <div class="input-group-append">
+                    <button class="btn btn-primary" id="copyRgbCode" data-copy-target="rgbCode">
+                        Copy
+                    </button>
+                </div>
+            </div><br><br>
         </div>
+<div class="success" style="background-color: #e7f3fe; text-align: justify; border-left: 6px solid #2196F3; border-top: 0.5px solid black;  border-right: 0.5px solid black; border-bottom: 0.5px solid black;padding:1%;">
+            <h6>Note:</h6>
+Spliting the screen will help you to choose colors from other sites.
+            </div>
+	<img src="src="images/ColorPicker.png" alt="demo Image" height="25%" width="25%">
     </div>
 
     <script>
@@ -47,6 +75,13 @@
                 return `${r}, ${g}, ${b}`;
             }
 
+            // Function to convert RGB to hex
+            function rgbToHex(rgb) {
+                const [r, g, b] = rgb.split(',').map((val) => parseInt(val.trim()));
+                const hex = ((r << 16) | (g << 8) | b).toString(16);
+                return '#' + ('000000' + hex).slice(-6);
+            }
+
             // Event listener for color picker change
             colorPicker.addEventListener('change', function () {
                 // Get the selected color value
@@ -58,6 +93,28 @@
                 // Convert hex to RGB and update the RGB code display input
                 const rgbColor = hexToRgb(selectedColor);
                 rgbCode.value = rgbColor;
+            });
+
+            // Event listener for copy buttons
+            $('#copyColorCode, #copyRgbCode').click(function () {
+                const copyButton = $(this);
+                const codeToCopy = this.dataset.copyTarget;
+                const codeType = codeToCopy === 'colorCode' ? 'HTML Color' : 'RGB Color';
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = document.getElementById(codeToCopy).value;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextArea);
+
+                // Update the copy button style and text to "Copied"
+                copyButton.addClass('copied');
+                copyButton.text('Copied');
+                setTimeout(function () {
+                    // Revert the copy button style and text to "Copy" after 1 second
+                    copyButton.removeClass('copied');
+                    copyButton.text('Copy');
+                }, 3000);
             });
         });
     </script>
