@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>color picker</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">HTML and RGB Color Code Display</h1>
+        <div class="form-group">
+            <input type="color" id="colorPicker" class="form-control form-control-lg" />
+        </div>
+        <div class="form-group">
+            <label for="colorCode">HTML Color Code:</label>
+            <input type="text" id="colorCode" class="form-control form-control-lg" readonly />
+        </div>
+        <div class="form-group">
+            <label for="rgbCode">RGB Color Code:</label>
+            <input type="text" id="rgbCode" class="form-control form-control-lg" readonly />
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Get the color picker element
+            const colorPicker = document.getElementById('colorPicker');
+
+            // Get the color code element
+            const colorCode = document.getElementById('colorCode');
+
+            // Get the RGB code element
+            const rgbCode = document.getElementById('rgbCode');
+
+            // Function to convert hex to RGB
+            function hexToRgb(hex) {
+                const bigint = parseInt(hex.substring(1), 16);
+                const r = (bigint >> 16) & 255;
+                const g = (bigint >> 8) & 255;
+                const b = bigint & 255;
+                return `${r}, ${g}, ${b}`;
+            }
+
+            // Event listener for color picker change
+            colorPicker.addEventListener('change', function () {
+                // Get the selected color value
+                const selectedColor = colorPicker.value;
+
+                // Update the color code display input
+                colorCode.value = selectedColor;
+
+                // Convert hex to RGB and update the RGB code display input
+                const rgbColor = hexToRgb(selectedColor);
+                rgbCode.value = rgbColor;
+            });
+        });
+    </script>
+</body>
+</html>
