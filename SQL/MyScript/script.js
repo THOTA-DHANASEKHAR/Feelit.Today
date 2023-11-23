@@ -77,27 +77,26 @@ $(document).ready(function() {
 		const listofitems = `
       <div id='listofitems'>
       <li class='LeftSideIndex_Btn_h'>Introduction To Sql:</li>
-<a href='/index'><li class='LeftSideIndex_Btn' id='index' name='index'>SQL What Is Sql?</li></a>
-<a href='/syntax'><li class='LeftSideIndex_Btn' id='syntax' name='syntax'>SQL Syntax</li></a>
-<a href='/commands'><li class='LeftSideIndex_Btn' id='commands' name='commands'>SQL Commands</li></a>
-<a href='/comments'><li class='LeftSideIndex_Btn' id='comments' name='comments'>SQL Comments</li></a>
-<a href='/pros_and_cons_of_sql'><li class='LeftSideIndex_Btn' id='pros_and_cons_of_sql' name='pros_and_cons_of_sql'>SQL Pros and cons of SQL</li></a>
+<a href='/SQL/index'><li class='LeftSideIndex_Btn' id='index' name='index'>SQL What Is Sql?</li></a>
+<a href='/SQL/syntax'><li class='LeftSideIndex_Btn' id='syntax' name='syntax'>SQL Syntax</li></a>
+<a href='/SQL/commands'><li class='LeftSideIndex_Btn' id='commands' name='commands'>SQL Commands</li></a>
+<a href='/SQL/comments'><li class='LeftSideIndex_Btn' id='comments' name='comments'>SQL Comments</li></a>
+<a href='/SQL/pros_and_cons_of_sql'><li class='LeftSideIndex_Btn' id='pros_and_cons_of_sql' name='pros_and_cons_of_sql'>SQL Pros and cons of SQL</li></a>
 <li class='LeftSideIndex_Btn_h'>Relational Databases: </li>
-<a href='/dbms'><li class='LeftSideIndex_Btn' id='dbms' name='dbms'>What Is A DBMS?</li></a>
+<a href='/SQL/dbms'><li class='LeftSideIndex_Btn' id='dbms' name='dbms'>What Is A DBMS?</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Retrieval: </li>
-<a href='/select_statement'><li class='LeftSideIndex_Btn' id='select' name='select_statement'>SQL Select Statement</li></a>
-<a href='/from_clause'><li class='LeftSideIndex_Btn' id='from' name='from_clause'>SQL From Clause</li></a>
-<a href='/where_clause'><li class='LeftSideIndex_Btn' id='where' name='where_clause'>SQL Where Clause</li></a>
-<a href='/group_by_clause'><li class='LeftSideIndex_Btn' id='group by' name='group_by_clause'>SQL Group By Clause</li></a>
-<a href='/having_clause'><li class='LeftSideIndex_Btn' id='having' name='having_clause'>SQL Having Clause</li></a>
-<a href='/order_by_clause'><li class='LeftSideIndex_Btn' id='order by' name='order_by_clause'>SQL Order By Clause</li></a>
-<a href='/limit_and_offset'><li class='LeftSideIndex_Btn' id='limit and offset' name='limit_and_offset'>SQL Limit And Offset</li></a>
-<a href='/distinct'><li class='LeftSideIndex_Btn' id='distinct' name='distinct'>SQL Distinct</li></a>
-<a href='/as_clause'><li class='LeftSideIndex_Btn' id='alias' name='as_clause'>SQL As Clause</li></a>
-<a href='/aggregate_functions'><li class='LeftSideIndex_Btn' id='aggregate_functions' name='aggregate_functions'>SQL Aggregate Functions</li></a>
-<a href='/subqueries'><li class='LeftSideIndex_Btn' id='subqueries' name='subqueries'>SQL Subqueries</li></a>
-<a href='/top'><li class='LeftSideIndex_Btn' id='top' name='top'>SQL Top</li></a>
+<a href='/SQL/select_statement'><li class='LeftSideIndex_Btn' id='select' name='select_statement'>SQL Select Statement</li></a>
+<a href='/SQL/from_clause'><li class='LeftSideIndex_Btn' id='from' name='from_clause'>SQL From Clause</li></a>
+<a href='/SQL/where_clause'><li class='LeftSideIndex_Btn' id='where' name='where_clause'>SQL Where Clause</li></a>
+<a href='/SQL/group_by_clause'><li class='LeftSideIndex_Btn' id='group by' name='group_by_clause'>SQL Group By Clause</li></a>
+<a href='/SQL/having_clause'><li class='LeftSideIndex_Btn' id='having' name='having_clause'>SQL Having Clause</li></a>
+<a href='/SQL/order_by_clause'><li class='LeftSideIndex_Btn' id='order by' name='order_by_clause'>SQL Order By Clause</li></a>
+<a href='/SQL/limit_and_offset'><li class='LeftSideIndex_Btn' id='limit and offset' name='limit_and_offset'>SQL Limit And Offset</li></a>
+<a href='/SQL/distinct'><li class='LeftSideIndex_Btn' id='distinct' name='distinct'>SQL Distinct</li></a>
+<a href='/SQL/as_clause'><li class='LeftSideIndex_Btn' id='alias' name='as_clause'>SQL As Clause</li></a>
+<a href='/SQL/aggregate_functions'><li class='LeftSideIndex_Btn' id='aggregate_functions' name='aggregate_functions'>SQL Aggregate Functions</li></a>
+<a href='/SQL/subqueries'><li class='LeftSideIndex_Btn' id='subqueries' name='subqueries'>SQL Subqueries</li></a>
 <li class='LeftSideIndex_Btn_h'>Limit & Offset:</li>
 <a href='/limit'><li class='LeftSideIndex_Btn' id='limit' name='limit'>SQL Limit</li></a>
 <a href='/offset'><li class='LeftSideIndex_Btn' id='offset' name='offset'>SQL Offset</li></a>
