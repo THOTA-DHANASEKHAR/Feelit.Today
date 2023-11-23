@@ -81,7 +81,7 @@ $(document).ready(function() {
 <a href='/SQL/syntax'><li class='LeftSideIndex_Btn' id='syntax' name='syntax'>SQL Syntax</li></a>
 <a href='/SQL/commands'><li class='LeftSideIndex_Btn' id='commands' name='commands'>SQL Commands</li></a>
 <a href='/SQL/comments'><li class='LeftSideIndex_Btn' id='comments' name='comments'>SQL Comments</li></a>
-<a href='/SQL/Pros and cons'><li class='LeftSideIndex_Btn' id='pros_and_cons_of_sql' name='pros_and_cons_of_sql'>SQL Pros and cons of SQL</li></a>
+<a href='/SQL/pros and cons'><li class='LeftSideIndex_Btn' id='pros and cons' name='pros_and_cons_of_sql'>SQL Pros and cons of SQL</li></a>
 <li class='LeftSideIndex_Btn_h'>Relational Databases: </li>
 <a href='/SQL/data base management system'><li class='LeftSideIndex_Btn' id='dbms' name='dbms'>What Is A DBMS?</li></a>
 
