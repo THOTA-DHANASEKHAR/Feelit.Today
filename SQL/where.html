@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>SQL WHERE CLAUSE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>where</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>SQL WHERE CLAUSE</h4><br>
+                <p>The WHERE clause in SQL is used to filter rows from a table based on specified conditions. It is an
+                    essential component of SQL statements, such as <b>SELECT, UPDATE, DELETE, and MERGE</b> allowing
+                    you to define criteria that determine which rows are included in the result set or affected by an
+                    operation. <br><br>The <b>WHERE</b> clause is used to apply conditions to one or more columns in a table, and it
+                    returns only the rows that satisfy those conditions.</p><br>
+
+                <p><b>Syntax:</b> The basic syntax of the <b>WHERE</b> statement is as follows:</b></p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre
+                        class="side_border"><code class="language-sql">SELECT column1, column2, ... 
+FROM table_name 
+WHERE condition;</code></pre>
+                </div><br><br>
+
+                <h6><b>Table Name: </b>students:</h6>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>ID</th>
+                            <th>name</th>
+                            <th>grade</th>
+                            <th>age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>A</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sam</td>
+                            <td>B</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Robert</td>
+                            <td>C</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Emily</td>
+                            <td>F</td>
+                            <td>19</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <hr><br>
+
+                <p>1. If you want to retrieve the names of all <b>students who are 19 years old</b>, you can use the following
+                    SELECT statement with a <b>WHERE</b> clause:</p>
+                    
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre
+                        class="side_border"><code class="language-sql">SELECT name, age 
+FROM students 
+WHERE age = 19;</code></pre>
+                </div><br>
+                <h6>Result:</h6>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>name</th>
+                            <th>age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sam</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Emily</td>
+                            <td>19</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+                <p><b>2. Complex Conditions: </b>The WHERE clause allows you to create complex conditions using logical operators (<b> AND, OR,
+                NOT </b>) and parentheses to group conditions. <br><br><b>For example</b>, to retrieve students who are 19 years old
+                    and have a grade of 'B' or 'C' you can use the 'OR' operator:</p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre
+                        class="side_border"><code class="language-sql">SELECT name 
+FROM students 
+WHERE age = 19 AND (grade = 'B' OR grade = 'C');</code></pre>
+                </div><br>
+                <h6>Result:</h6>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>name</th>
+                            <th>age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sam</td>
+                            <td>19</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p><b>To summarize:</b> the <b>WHERE</b> clause is a fundamental tool for filtering and retrieving specific data from a database.
+                    It is commonly used to restrict the results of SQL queries to match specific criteria and is
+                    essential for data analysis, reporting, and data manipulation tasks.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button">
+                </div>
+            </div>
+        </div>
+
+        <script src="MyScript/script.js"></script>
+        <!-- Load necessary JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        </script>
+    </div>
+</body>
+
+</html>

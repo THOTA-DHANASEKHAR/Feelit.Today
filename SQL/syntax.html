@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>SQL syntax?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>What is SQL syntax?</h4>
+                <p>SQL syntax is the set of rules that govern how to write SQL statements to interact with a database.
+                    These rules define the structure of SQL statements, the keywords that can be used, and the order in
+                    which they must be used. SQL syntax is standardized by the International Organization for
+                    Standardization (ISO), but there are some differences between the implementations of SQL from
+                    different vendors.</p>
+
+                <br>
+                <h4>Why is SQL syntax important?</h4>
+                <p>SQL syntax is important because it allows us to write SQL statements that are unambiguous and can be
+                    understood by different database systems. This makes it possible to share SQL statements with others
+                    and to write portable applications that can work with different databases.</p>
+
+                <br>
+                <h4>What is the structure of an SQL statement?</h4>
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre class="side_border"><code class="language-sql"> SELECT column1, column2, ...
+    FROM table_name
+    WHERE condition
+    GROUP BY column1
+    HAVING condition
+    ORDER BY ASC | DESC;
+
+    SELECT --> important
+    FROM --> important
+    WHERE condition
+    GROUP BY column1
+    HAVING condition
+    ORDER BY ASC | DESC
+    ; --> important</code></pre>
+                </div><br>
+                <p><b>1. SELECT </b>statement is used to retrieve data from one or more tables.</p>
+                <p><b>2. FROM </b>clause specifies the table or tables from which to retrieve data.</p>
+                <p><b>3. WHERE </b>clause filters the result set based on specified conditions.</p>
+                <p><b>4. GROUP BY </b>clause groups rows based on specified columns.</p>
+                <p><b>5. HAVING </b>clause filters grouped rows based on aggregate function results.</p>
+                <p><b>6. ORDER BY </b>clause sorts the result set based on one or more columns.</p><br>
+
+                <h4>SQL Statement Structure:</h4>
+                <p><b>Keywords:</b> SQL statements begin with keywords like `SELECT`, `FROM`, `WHERE`, etc.</p>
+                <p><b>Clauses:</b> Statements are structured with various clauses (e.g., `SELECT`, `FROM`, `WHERE`,
+                    `GROUP BY`, `ORDER BY`) that define their purpose and conditions.</p>
+                <p><b>Identifiers:</b> Names of tables, columns, and other database objects are identifiers.</p>
+                <p><b>Operators:</b> SQL uses operators such as `=`, `<>`, `<`, `>`, `LIKE`, `IN`, etc., for comparisons
+                            and conditions.</p>
+                <p><b>Semicolons:</b> Statements are terminated with a semicolon (`;`) in most database systems.</p><br>
+
+                <h4>What are the different types of SQL statements?</h4>
+                <p>There are many different types of SQL statements, but some of the most common ones are:</p>
+                <p><b>SELECT:</b> Retrieves data from a database table.</p>
+                <p><b>INSERT INTO:</b> Inserts new data into a database table.</p>
+                <p><b>UPDATE:</b> Updates existing data in a database table.</p>
+                <p><b>DELETE:</b> Deletes data from a database table.</p>
+                <p><b>CREATE TABLE:</b> Creates a new database table.</p>
+                <p><b>CREATE DATABASE:</b> Creates a new database.</p>
+                <p><b>DROP TABLE:</b> Deletes a database table.</p>
+                <p><b>DROP DATABASE:</b> Deletes a database.</p>
+
+                <p>Understanding SQL syntax is fundamental for interacting with databases. The combination of
+                    statements, clauses, and functions provides a powerful and flexible way to manage and query
+                    relational databases.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button">
+                </div>
+            </div>
+        </div>
+
+        <script src="MyScript/script.js"></script>
+        <!-- Load necessary JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        </script>
+    </div>
+</body>
+
+</html>

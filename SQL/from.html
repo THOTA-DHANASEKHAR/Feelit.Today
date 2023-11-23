@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>SQL FROM CLAUSE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>from</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>SQL FROM STATEMENT</h4><br>
+                <p>The <b>FROM</b> clause in SQL is used to specify the source table or tables from which you want to retrieve data. It is an
+                essential part of the SELECT statement and is used to identify the tables involved in the query.</p><br>
+
+
+                <p><b>Syntax:</b> The basic syntax of the <b>FROM</b> clause is as follows:</b></p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Syntax:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre class="side_border"><code class="language-sql"><pre class="side_border"><code class="language-sql">-- Select from single table
+SELECT column1, column2, ... 
+FROM table_name;
+
+-- OR
+SELECT column1, column2, ...
+FROM [database_nmae].[table_name];
+
+-- Multiple Tables
+SELECT t1.column1, t2.column2, t3.column2, ... 
+FROM table1 t1
+JOIN table2 t2 ON t1.column == t2.column
+JOIN table3 t3 ON t2.column == t3.column;
+</code></pre></code></pre>
+                </div><br>
+
+                <br>
+                <h6><b>Table-1 Name: </b>employees:</h6>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>id</th>
+                            <th>name</th>
+                            <th>salary</th>
+                            <th>dept_id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice</td>
+                            <td>50000</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob</td>
+                            <td>60000</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Charlie</td>
+                            <td>55000</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>David</td>
+                            <td>70000</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6><b>Table-2 Name: </b>departments:</h6>
+                
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>dept_id</th>
+                            <th>dept_name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HR</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Finance</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><hr><br>
+                <p><b>1. Selecting from 1 Table:</b> You can use <b>FROM clause</b> for selecting data from specific table.</p>
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre class="side_border"><code class="language-sql">SELECT id, name, salary 
+FROM employees;</code></pre>
+                </div><br>
+                <h6>Result:</h6>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>id</th>
+                            <th>name</th>
+                            <th>salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice</td>
+                            <td>50000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob</td>
+                            <td>60000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Charlie</td>
+                            <td>55000</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>David</td>
+                            <td>70000</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+
+                <p><b>2. Selecting data from 2 tables:</b> You can use from clause with join for selecting data from multiple tables </p>
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i> Copy</span>
+                    </div>
+                    <pre class="side_border"><code class="language-sql">SELECT e.name, d.dept_name 
+FROM employees 
+JOIN departments ON e.dept_id = d.dept_id;
+
+-- OR 
+
+SELECT employees.name, departments.dept_name 
+FROM employees 
+JOIN departments ON employees.dept_id = departments.dept_id;</code></pre>
+                </div><br>
+                <h6>Result:</h6>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>name</th>
+                            <th>dept_name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alice</td>
+                            <td>HR</td>
+                        </tr>
+                        <tr>
+                            <td>Bob</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr>
+                            <td>Charlie</td>
+                            <td>HR</td>
+                        </tr>
+                        <tr>
+                            <td>David</td>
+                            <td>Finance</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div><br>
+            
+            <p><b>To summarize:</b> The <b>FROM</b> clause is fundamental in SQL queries as it identifies the data source and allows you to perform operations on
+            the specified tables. It is often used in conjunction with other clauses like `JOIN` to retrieve data from multiple
+            tables.</p><br>
+            <hr>
+            <div class="d-flex justify-content-between" id="next_nav_button">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+
+</body>
+
+</html>

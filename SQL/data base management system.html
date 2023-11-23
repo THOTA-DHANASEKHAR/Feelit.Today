@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>WHAT IS DBMS ?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>dbms</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>WHAT IS DBMS ?</h4>
+
+                <p>A database management system (DBMS) is a software application that allows users to create, organize,
+                    and manage data in a structured way. It provides a layer of abstraction between the data itself and
+                    the applications that access and manipulate it. This allows the DBMS to handle tasks such as data
+                    storage, retrieval, and security, ensuring that data is stored consistently and efficiently.</p>
+                <br>
+                <h4>Key Functions of a DBMS:</h4>
+                <p><b>Data Storage:</b> The DBMS manages the storage of data in a structured format, often using tables
+                    or other relational constructs. It ensures data integrity and consistency by maintaining
+                    relationships between different data elements.</p>
+                <p><b>Data Organization:</b> The DBMS organizes data into a logical and hierarchical structure, making
+                    it easy to access, retrieve, and manipulate. It provides efficient data access mechanisms and
+                    indexes to improve search performance.</p>
+                <p><b>Data Management:</b> The DBMS manages the overall data lifecycle, including data creation,
+                    modification, deletion, and backup. It enforces data access control and security measures to protect
+                    sensitive information.</p>
+                <p><b>Transaction Management:</b> The DBMS ensures data consistency and integrity during concurrent
+                    access by multiple users or applications. It implements transaction handling mechanisms to guarantee
+                    the atomicity, consistency, isolation, and durability (ACID) properties.</p>
+                <br>
+                <h4>Common DBMS Applications:</h4>
+                <p><b>Customer Relationship Management (CRM):</b> Managing customer data, interactions, and sales
+                    records.</p>
+                <p><b>Supply Chain Management (SCM):</b> Tracking inventory, managing logistics, and optimizing supply
+                    chains.</p>
+                <p><b>Financial Management:</b> Processing transactions, managing financial data, and generating
+                    reports.</p>
+                <p><b>Content Management Systems (CMS):</b> Storing and managing website content, including text,
+                    images, and videos.</p>
+                <p><b>Scientific Research:</b> Organizing and analyzing large datasets for scientific research and
+                    analysis.</p>
+                <br>
+                <h4>Common types of Database Management Systems include:</h4>
+                <p><b>Relational Database Management System (RDBMS):</b> Organizes data into tables with rows and
+                    columns. Examples include MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.</p>
+                <p><b>NoSQL Database Management System:</b> Supports a flexible and schema-less data model. Examples
+                    include MongoDB, Cassandra, and Redis.</p>
+                <p><b>Object-Oriented Database Management System (OODBMS):</b> Organizes data as objects, allowing for
+                    complex relationships and inheritance. Examples include db4o and ObjectDB.</p>
+                <br>
+                <h4>Examples of Popular DBMSs:</h4>
+                <p><b>MySQL:</b> Open-source, widely used for web applications and data storage.</p>
+                <p><b>PostgreSQL:</b> Open-source, known for its advanced features and complex data relationships.</p>
+                <p><b>Oracle Database:</b> Paid commercial DBMS, known for its enterprise-grade features and
+                    scalability.</p>
+                <p><b>Microsoft SQL Server:</b> Paid commercial DBMS, widely used for Microsoft-based applications.</p>
+                <p><b>MongoDB:</b> NoSQL database, stores data in JSON-like documents, suitable for unstructured data.
+                </p>
+                <br>
+                <p>DBMS plays a crucial role in modern information systems, providing a structured and efficient means
+                    of managing and retrieving data. The choice of a particular DBMS depends on factors such as the
+                    nature of the data, scalability requirements, and specific application needs.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button">
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+
+        <script src="MyScript/script.js"></script>
+        <!-- Load necessary JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        </script>
+    </div>
+</body>
+
+</html>

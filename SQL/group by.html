@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>SQL GROUP BY CLAUSE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>group by</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>SQL GROUP BY CLAUSE</h4><br>
+                <p>The <b>GROUP BY</b> clause in SQL is used to group rows from a table based on the values in one or more
+                columns. It is often used in conjunction with aggregate functions, such as <b>SUM, COUNT, AVG,
+                MIN, and MAX</b> to perform calculations on groups of rows, rather than on individual rows.<br> <br>The
+                <b>GROUP BY</b> clause is particularly useful for summarizing data and generating reports that require
+                data to be grouped and analyzed in categories or sets.</p><br>
+
+
+                <p><b>Syntax:</b> The basic syntax of the <b>GROUP BY</b> statement is as follows:</b></p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Syntax:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre class="side_border"><code class="language-sql"><pre class="side_border"><code class="language-sql">SELECT column1, aggregate_function(column) as column2, ... 
+FROM table_name 
+WHERE condition
+GROUP BY column1, column2, ...;</code></pre></code></pre>
+                </div><br>
+
+                <br>
+                <h6><b>Table Name: </b>employees:</h6>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>id</th>
+                            <th>name</th>
+                            <th>salary</th>
+                            <th>dept_id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice</td>
+                            <td>50000</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bob</td>
+                            <td>60000</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Charlie</td>
+                            <td>55000</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>David</td>
+                            <td>70000</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <hr><br>
+                <p><b>1. Group calculation:</b> You can use <b>GROUP BY</b> to perform <b>Aggregations</b> for each group of values.</p>
+                <p>If you want to find the total salary spent on each department, you can use the `GROUP BY` clause with
+                the <b>SUM()</b> aggregate function and to find total employees in each depertment can use <b>COUNT()</b> aggregate function. you can also use <b>WHERE</b> condition if required</p>
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre class="side_border"><code class="language-sql">SELECT dept_id, 
+sum(salary) as total_salary, 
+COUNT(*) as employee_count 
+FROM employees
+GROUP BY dept_id;</code></pre>
+                </div><br>
+                <h6>Result:</h6>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>dept_id</th>
+                            <th>total_salary</th>
+                            <th>employee_count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>105000</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>130000</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br>
+            <p><b>To summarize: </b>The <b>GROUP BY</b> clause is a powerful feature in SQL for summarizing and analyzing data by grouping it
+            into categories. It is commonly used in reporting and data analysis to obtain insights and summaries
+            of data.</p><br>
+            <hr>
+            <div class="d-flex justify-content-between" id="next_nav_button">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+
+</body>
+
+</html>
