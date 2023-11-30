@@ -109,50 +109,50 @@ $(document).ready(function() {
       <div id='listofitems'>
       <li class='LeftSideIndex_Btn_h'>Data Warehouse</li>
       <a href='/index'><li class='LeftSideIndex_Btn' id='index' name='index'>What is Data Warehouse ?</li></a>
-<a href='/data warehouse architecture'><li class='LeftSideIndex_Btn' id='data warehouse architecture' name='data warehouse architecture'>Architecture</li></a>
-<a href='/data warehouse best practices'><li class='LeftSideIndex_Btn' id='data warehouse best practices' name='data warehouse best practices'>Best Practices</li></a>
-<a href='/advantages of data warehousing '><li class='LeftSideIndex_Btn' id='advantages of data warehousing ' name='advantages'>Advantages</li></a>
+<a href='/wh/data warehouse architecture'><li class='LeftSideIndex_Btn' id='data warehouse architecture' name='data warehouse architecture'>Architecture</li></a>
+<a href='/wh/data warehouse best practices'><li class='LeftSideIndex_Btn' id='data warehouse best practices' name='data warehouse best practices'>Best Practices</li></a>
+<a href='/wh/advantages of data warehousing '><li class='LeftSideIndex_Btn' id='advantages of data warehousing ' name='advantages'>Advantages</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Normalization</li>
-<a href='/normalization'><li class='LeftSideIndex_Btn' id='normalization' name='normalization'>Normalization</li></a>
+<a href='/wh/normalization'><li class='LeftSideIndex_Btn' id='normalization' name='normalization'>Normalization</li></a>
 
 <li class='LeftSideIndex_Btn_h'>OLTP & OLAP</li>
-<a href='/oltp'><li class='LeftSideIndex_Btn' id='oltp' name='oltp'>OLTP</li></a>
-<a href='/olap'><li class='LeftSideIndex_Btn' id='olap' name='olap'>OLAP</li></a>
-<a href='/oltp vs olap'><li class='LeftSideIndex_Btn' id='oltp vs olap' name='oltp vs olap'>OLTP Vs OLAP</li></a>
+<a href='/wh/oltp'><li class='LeftSideIndex_Btn' id='oltp' name='oltp'>OLTP</li></a>
+<a href='/wh/olap'><li class='LeftSideIndex_Btn' id='olap' name='olap'>OLAP</li></a>
+<a href='/wh/oltp vs olap'><li class='LeftSideIndex_Btn' id='oltp vs olap' name='oltp vs olap'>OLTP Vs OLAP</li></a>
 
 <li class='LeftSideIndex_Btn_h'>SCD</li>
-<a href='/slowly changing dimension'><li class='LeftSideIndex_Btn' id='slowly changing dimension' name='slowly changing dimension'>Slowly Changing Dimension</li></a>
+<a href='/wh/slowly changing dimension'><li class='LeftSideIndex_Btn' id='slowly changing dimension' name='slowly changing dimension'>Slowly Changing Dimension</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Marts</li>
-<a href='/data marts'><li class='LeftSideIndex_Btn' id='data marts' name='data marts'>Data Marts</li></a>
+<a href='/wh/data marts'><li class='LeftSideIndex_Btn' id='data marts' name='data marts'>Data Marts</li></a>
 
 <li class='LeftSideIndex_Btn_h'>ETL & ELT</li>
-<a href='/etl '><li class='LeftSideIndex_Btn' id='etl ' name='etl '>ETL </li></a>
-<a href='/elt'><li class='LeftSideIndex_Btn' id='elt' name='elt'>ELT</li></a>
-<a href='/etl vs elt'><li class='LeftSideIndex_Btn' id='etl vs elt' name='etl vs elt'>ETL Vs ELT</li></a>
+<a href='/wh/etl '><li class='LeftSideIndex_Btn' id='etl ' name='etl '>ETL </li></a>
+<a href='/wh/elt'><li class='LeftSideIndex_Btn' id='elt' name='elt'>ELT</li></a>
+<a href='/wh/etl vs elt'><li class='LeftSideIndex_Btn' id='etl vs elt' name='etl vs elt'>ETL Vs ELT</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Star & Snowflake</li>
-<a href='/star schema'><li class='LeftSideIndex_Btn' id='star schema' name='star schema'>Star Schema</li></a>
-<a href='/snowflake schema'><li class='LeftSideIndex_Btn' id='snowflake schema' name='snowflake schema'>Snowflake Schema</li></a>
-<a href='/star schema vs snowflake schema'><li class='LeftSideIndex_Btn' id='star schema vs snowflake schema' name='star schema vs snowflake schema'>Star Schema Vs Snowflake Schema</li></a>
+<a href='/wh/star schema'><li class='LeftSideIndex_Btn' id='star schema' name='star schema'>Star Schema</li></a>
+<a href='/wh/snowflake schema'><li class='LeftSideIndex_Btn' id='snowflake schema' name='snowflake schema'>Snowflake Schema</li></a>
+<a href='/wh/star schema vs snowflake schema'><li class='LeftSideIndex_Btn' id='star schema vs snowflake schema' name='star schema vs snowflake schema'>Star Schema Vs Snowflake Schema</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Fact & Dimenction</li>
-<a href='/fact tables'><li class='LeftSideIndex_Btn' id='fact tables' name='fact tables'>Fact Tables</li></a>
-<a href='/dimension tables'><li class='LeftSideIndex_Btn' id='dimension tables' name='dimension tables'>Dimension Tables</li></a>
-<a href='/fact tables vs dimension tables'><li class='LeftSideIndex_Btn' id='fact tables vs dimension tables' name='fact tables vs dimension tables'>Fact Tables Vs Dimension Tables</li></a>
+<a href='/wh/fact tables'><li class='LeftSideIndex_Btn' id='fact tables' name='fact tables'>Fact Tables</li></a>
+<a href='/wh/dimension tables'><li class='LeftSideIndex_Btn' id='dimension tables' name='dimension tables'>Dimension Tables</li></a>
+<a href='/wh/fact tables vs dimension tables'><li class='LeftSideIndex_Btn' id='fact tables vs dimension tables' name='fact tables vs dimension tables'>Fact Tables Vs Dimension Tables</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data and Delta Lakes</li>
-<a href='/data lake'><li class='LeftSideIndex_Btn' id='data lake' name='data lake'>Data Lake</li></a>
-<a href='/delta lake'><li class='LeftSideIndex_Btn' id='delta lake' name='delta lake'>Delta Lake</li></a>
-<a href='/data lake vs delta lake'><li class='LeftSideIndex_Btn' id='data lake vs delta lake' name='data lake vs delta lake'>Data Lake Vs Delta Lake</li></a>
+<a href='/wh/data lake'><li class='LeftSideIndex_Btn' id='data lake' name='data lake'>Data Lake</li></a>
+<a href='/wh/delta lake'><li class='LeftSideIndex_Btn' id='delta lake' name='delta lake'>Delta Lake</li></a>
+<a href='/wh/data lake vs delta lake'><li class='LeftSideIndex_Btn' id='data lake vs delta lake' name='data lake vs delta lake'>Data Lake Vs Delta Lake</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Important Concepts</li>
-<a href='/data mining'><li class='LeftSideIndex_Btn' id='data mining' name='data mining'>Data Mining</li></a>
-<a href='/data modeling'><li class='LeftSideIndex_Btn' id='data modeling' name='data modeling'>Data Modeling</li></a>
-<a href='/operational data store'><li class='LeftSideIndex_Btn' id='operational data store' name='operational data store'>Operational Data Store</li></a>
-<a href='/data governance'><li class='LeftSideIndex_Btn' id='data governance' name='data governance'>Data Governance</li></a>
-<a href='/performance tuning'><li class='LeftSideIndex_Btn' id='performance tuning' name='performance tuning'>Performance Tuning</li></a>
+<a href='/wh/data mining'><li class='LeftSideIndex_Btn' id='data mining' name='data mining'>Data Mining</li></a>
+<a href='/wh/data modeling'><li class='LeftSideIndex_Btn' id='data modeling' name='data modeling'>Data Modeling</li></a>
+<a href='/wh/operational data store'><li class='LeftSideIndex_Btn' id='operational data store' name='operational data store'>Operational Data Store</li></a>
+<a href='/wh/data governance'><li class='LeftSideIndex_Btn' id='data governance' name='data governance'>Data Governance</li></a>
+<a href='/wh/performance tuning'><li class='LeftSideIndex_Btn' id='performance tuning' name='performance tuning'>Performance Tuning</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Warehouse Tools</li>
 <a href='/data warehouse tools'><li class='LeftSideIndex_Btn' id='data warehouse tools' name='data warehouse tools'>Data Warehouse Tools</li></a>
