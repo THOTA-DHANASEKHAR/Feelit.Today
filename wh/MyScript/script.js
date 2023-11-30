@@ -108,9 +108,9 @@ $(document).ready(function() {
 		const listofitems = `
       <div id='listofitems'>
       <li class='LeftSideIndex_Btn_h'>Data Warehouse</li>
-      <a href='/index'><li class='LeftSideIndex_Btn' id='index' name='index'>What is Data Warehouse ?</li></a>
+      <a href='/wh/index'><li class='LeftSideIndex_Btn' id='index' name='index'>What is Data Warehouse ?</li></a>
 <a href='/wh/data warehouse architecture'><li class='LeftSideIndex_Btn' id='data warehouse architecture' name='data warehouse architecture'>Architecture</li></a>
-<a href='/wh/data warehouse best practices'><li class='LeftSideIndex_Btn' id='data warehouse best practices' name='data warehouse best practices'>Best Practices</li></a>
+<a href='/wh/Data Warehouse best practices'><li class='LeftSideIndex_Btn' id='data warehouse best practices' name='data warehouse best practices'>Best Practices</li></a>
 <a href='/wh/advantages of data warehousing '><li class='LeftSideIndex_Btn' id='advantages of data warehousing ' name='advantages'>Advantages</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Normalization</li>
@@ -122,10 +122,10 @@ $(document).ready(function() {
 <a href='/wh/oltp vs olap'><li class='LeftSideIndex_Btn' id='oltp vs olap' name='oltp vs olap'>OLTP Vs OLAP</li></a>
 
 <li class='LeftSideIndex_Btn_h'>SCD</li>
-<a href='/wh/slowly changing dimension'><li class='LeftSideIndex_Btn' id='slowly changing dimension' name='slowly changing dimension'>Slowly Changing Dimension</li></a>
+<a href='/wh/Slowly changing dimension'><li class='LeftSideIndex_Btn' id='slowly changing dimension' name='slowly changing dimension'>Slowly Changing Dimension</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Marts</li>
-<a href='/wh/data marts'><li class='LeftSideIndex_Btn' id='data marts' name='data marts'>Data Marts</li></a>
+<a href='/wh/data Marts'><li class='LeftSideIndex_Btn' id='data marts' name='data marts'>Data Marts</li></a>
 
 <li class='LeftSideIndex_Btn_h'>ETL & ELT</li>
 <a href='/wh/etl '><li class='LeftSideIndex_Btn' id='etl ' name='etl '>ETL </li></a>
@@ -155,7 +155,7 @@ $(document).ready(function() {
 <a href='/wh/performance tuning'><li class='LeftSideIndex_Btn' id='performance tuning' name='performance tuning'>Performance Tuning</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Warehouse Tools</li>
-<a href='/data warehouse tools'><li class='LeftSideIndex_Btn' id='data warehouse tools' name='data warehouse tools'>Data Warehouse Tools</li></a>
+<a href='/wh/data warehouse tools'><li class='LeftSideIndex_Btn' id='data warehouse tools' name='data warehouse tools'>Data Warehouse Tools</li></a>
     </div>`;
 
 		const navigationbar = `
