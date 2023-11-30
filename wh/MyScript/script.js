@@ -155,7 +155,9 @@ $(document).ready(function() {
 <a href='/wh/performance tuning'><li class='LeftSideIndex_Btn' id='performance tuning' name='performance tuning'>Performance Tuning</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Data Warehouse Tools</li>
-<a href='/wh/data warehouse tools'><li class='LeftSideIndex_Btn' id='data warehouse tools' name='data warehouse tools'>Data Warehouse Tools</li></a>
+<a href='/wh/data warehouse Tools'><li class='LeftSideIndex_Btn' id='data warehouse tools' name='data warehouse tools'>Data Warehouse Tools</li></a>
+<li class='LeftSideIndex_Btn_h'></li>
+<li class='LeftSideIndex_Btn_h'</li>
     </div>`;
 
 		const navigationbar = `
