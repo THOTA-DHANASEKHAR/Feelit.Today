@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>ELT (Extract, Load, Transform):</h4>
+
+                <p>ELT is an approach to data integration and processing that stands for Extract, Load, Transform. In
+                    contrast to the more traditional ETL (Extract, Transform, Load) process, ELT shifts the
+                    transformation step from the traditional ETL workflow to the data warehouse environment. Here's a
+                    breakdown of each phase in ELT:</p>
+
+                <p><b>1. Extract:</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Extraction involves pulling raw data from source systems, which can include various types of
+                            databases, flat files, APIs, or other data repositories.</li>
+
+                        <li><b>Method:</b></li>
+
+                        <li>Data is extracted in its raw, unprocessed form, without significant modifications.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Load:</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Loading is the process of ingesting the raw data into the target data warehouse. The data is
+                            stored in its native format without undergoing extensive transformations at this stage.</li>
+
+                        <li><b>Method:</b></li>
+
+                        <li>Data is loaded into the data warehouse tables as-is, typically in a staging area.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Transform:</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Transformation involves processing and structuring the data within the data warehouse
+                            itself. Unlike traditional ETL, transformations occur after the data is loaded into the data
+                            warehouse.</li>
+
+                        <li><b>Method:</b></li>
+
+                        <li>SQL-based transformations, data cleansing, aggregation, and other manipulations are
+                            performed directly within the data warehouse using its processing capabilities.</li>
+
+                    </ul>
+                </div><br>
+
+                <br>
+                <h4>Key Characteristics and Considerations of ELT:</h4>
+
+                <p><b>1. Data Warehouse Processing Power:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT relies on the processing power and capabilities of the data warehouse itself to perform
+                            transformations. This often involves using SQL queries and other data processing functions
+                            supported by the data warehouse.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Parallel Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Many modern data warehouses are designed to support parallel processing, allowing them to
+                            handle large volumes of data and execute transformations efficiently across distributed
+                            resources.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT processes can take advantage of the scalability features of cloud-based data warehouses,
+                            allowing for the efficient processing of large datasets and the ability to scale resources
+                            up or down based on demand.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Real-time and Batch Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT supports both real-time and batch processing. Data can be loaded into the data warehouse
+                            in near real-time, and transformations can be applied on a scheduled basis or in response to
+                            specific events.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Simplified ETL Workflow:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT simplifies the overall data integration workflow by reducing the need for a separate
+                            transformation layer before loading data into the data warehouse. This can streamline the
+                            development and maintenance of data integration pipelines.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Schema-on-Read:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT often follows a schema-on-read approach, where the raw data is loaded into the data
+                            warehouse without a predefined structure. The schema is applied when querying the data for
+                            analysis or reporting.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Flexibility:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT provides flexibility in terms of handling diverse and unstructured data. Data can be
+                            loaded into the data warehouse in its raw form, and transformations can be applied as needed
+                            for different analytical purposes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Data Warehouse Independence:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT allows organizations to choose data warehouses that best suit their needs, as the
+                            transformation logic is implemented within the data warehouse itself. This provides
+                            flexibility in selecting data warehousing solutions based on features, performance, and
+                            cost.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Complex Transformations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While ELT is well-suited for many transformations, complex transformations that require
+                            extensive data cleansing, enrichment, or integration with external systems may still benefit
+                            from pre-processing in an ETL layer.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Data Governance and Security:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Implementing data governance and security measures is crucial in ELT processes, ensuring
+                            that sensitive data is protected and compliance requirements are met during the extraction,
+                            loading, and transformation stages.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>ELT is often associated with modern cloud-based data warehouses that provide scalable processing
+                    capabilities. It offers advantages in terms of simplicity, scalability, and flexibility in handling
+                    large and diverse datasets for analytical purposes. However, the choice between ELT and ETL depends
+                    on specific use cases, requirements, and the characteristics of the data integration environment.
+                </p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

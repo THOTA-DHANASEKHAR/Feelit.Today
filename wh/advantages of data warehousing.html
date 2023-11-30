@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+<div class="loadingspinner">
+  <div id="square1"></div>
+  <div id="square2"></div>
+  <div id="square3"></div>
+  <div id="square4"></div>
+  <div id="square5"></div>
+</div>
+<div class="content">
+    <h3 id='getclass' >SQL_Syntax</h3>
+    <div>
+        <section id="navigation_bar"></section>
+    </div>
+    <div>
+        <section id="navigation_bar_botom"></section>
+    </div>
+    <div style="padding-top: 4rem">
+        <div id="mobile">
+            <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+            <div id="listofitems_mobile1"></div>
+        </div>
+
+        <div class="row " id="laptop" >
+            <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+            </div>
+            <div class="col-10  RightSideIndex">
+                <div class="row">
+                    <div class="col-10" id="listofitems_Laptop1"></div>
+                    <div class="col-2"></div>
+                </div>
+                <footer id='footer' class=" text-light"></footer>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!--start with your content-->
+        <div><p>Fact tables and dimension tables are fundamental components of a star schema or snowflake schema in a data warehouse. They play distinct roles in organizing and structuring data for efficient querying and reporting in business intelligence and analytics. Let's explore the key characteristics of fact tables and dimension tables:</p>
+
+<h4>Fact Table:</h4><br>
+
+<p><b>1. Purpose:</b></p>
+
+<p><b>Stores Quantitative Data:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>A fact table stores quantitative data, often referred to as measures or metrics. These measures represent the business facts or events that the organization wants to analyze (e.g., sales revenue, quantity sold).</li>
+
+</ul></div><br>
+
+<p><b>2. Structure:</b></p>
+
+<p><b>Central Role:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>The fact table is typically located at the center of a star schema or snowflake schema. It contains foreign key references to related dimension tables.</li>
+
+</ul></div><br>
+
+<p><b>3. Content:</b></p>
+
+<p><b>Numeric Data:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>The content of a fact table consists of numeric data, usually in the form of aggregated or detailed measures. These measures are often additive and can be aggregated along dimensions.</li>
+
+</ul></div><br>
+
+<p><b>4. Granularity:</b></p>
+
+<p><b>Granularity of Data:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>The granularity of the data in a fact table is determined by the level of detail captured. Fact tables can store data at various levels, from highly granular (e.g., individual sales transactions) to more aggregated levels.</li>
+
+</ul></div><br>
+
+<p><b>5. Joins:</b></p>
+
+<p><b>Joined with Dimensions:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Fact tables are joined with dimension tables using foreign key relationships. The foreign keys in the fact table link to the primary keys of dimension tables, creating relationships for analysis.</li>
+
+</ul></div><br>
+
+<p><b>6. Example:</b></p>
+
+<p><b>Sales Fact Table:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>A sales fact table might contain columns such as sales amount, quantity sold, and profit, with foreign keys linking to dimensions like time, product, and customer.</li>
+
+</ul></div><br>
+
+<h4>Dimension Table:</h4><br>
+
+<p><b>1. Purpose:</b></p>
+
+<p><b>Descriptive Attributes:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>A dimension table stores descriptive attributes related to the business entities being analyzed. These attributes provide context and details for the measures in the fact table.</li>
+
+</ul></div><br>
+
+<p><b>2. Structure:</b></p>
+
+<p><b>Supports Analysis:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Dimension tables support the analysis of the measures stored in the fact table by providing additional context. They contain descriptive attributes that are used for slicing, dicing, and filtering data.</li>
+
+</ul></div><br>
+
+<p><b>3. Content:</b></p>
+
+<p><b>Non-Numeric Data:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>The content of a dimension table consists of non-numeric data, representing descriptive information about business entities. Examples include names, categories, and hierarchies.</li>
+
+</ul></div><br>
+
+<p><b>4. Granularity:</b></p>
+
+<p><b>Higher Granularity:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Dimension tables often have a higher level of granularity compared to fact tables. They provide attributes at a more detailed level to support analysis and reporting.</li>
+
+</ul></div><br>
+
+<p><b>5. Attributes:</b></p>
+
+<p><b>Descriptive Attributes:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Dimension tables include attributes that describe the dimensions being analyzed. For example, a time dimension table might include attributes like year, quarter, and month.</li>
+
+</ul></div><br>
+
+<p><b>6. Example:</b></p>
+
+<p><b>Product Dimension Table:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>A product dimension table might contain attributes such as product name, category, manufacturer, and other descriptive information about the products being sold.</li>
+
+</ul></div><br>
+
+<h4>Relationship between Fact Tables and Dimension Tables:</h4><br>
+
+<p><b>Joins:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Fact tables and dimension tables are linked through foreign key relationships. Foreign keys in the fact table reference the primary keys in dimension tables.</li>
+
+</ul></div><br>
+
+<p><b>Analytical Context:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Dimension tables provide the analytical context for measures in the fact table. They enable users to analyze and interpret quantitative data in the context of descriptive attributes.</li>
+
+</ul></div><br>
+
+<p><b>Hierarchical Structure:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>The combination of fact tables and dimension tables forms a hierarchical structure in a star schema or snowflake schema, allowing for easy navigation and analysis.</li>
+
+</ul></div><br>
+
+<h4>When to Use Each:</h4><br>
+
+<p><b>Use Fact Tables When:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Storing quantitative, numeric data (measures or metrics).</li>
+
+<li>Representing business events or facts that need to be analyzed.</li>
+
+</ul></div><br>
+
+<p><b>Use Dimension Tables When:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Storing descriptive attributes about business entities.</li>
+
+<li>Providing context and details for analysis.</li>
+
+</ul></div><br>
+
+<h4>Considerations:</h4><br>
+
+<p><b>Fact Tables Considerations:</b></p>
+<div class='liststyle'><ul>
+
+<li>Focus on numeric measures and business events.</li>
+
+<li>Supports aggregation and analysis of quantitative data.</li>
+
+</ul></div><br>
+
+<p><b>Dimension Tables Considerations:</b></p>
+
+<div class='liststyle'><ul>
+
+<li>Focus on descriptive attributes.</li>
+
+<li>Provides context for measures in fact tables.</li>
+
+</ul></div><br>
+
+<p>In summary, fact tables store quantitative data related to business events, while dimension tables store descriptive attributes that provide context for analysis. The combination of fact tables and dimension tables in a star schema or snowflake schema forms the foundation for efficient querying and reporting in a data warehouse.</p><br><hr>
+            <div class="d-flex justify-content-between" id="next_nav_button"></div>
+        </div>
+    </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+</html>

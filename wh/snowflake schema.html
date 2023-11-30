@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Snowflake Schema:</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The snowflake schema is a type of database schema used in data warehousing where a central
+                            fact table is connected to multiple dimension tables. However, unlike the star schema, the
+                            dimension tables in a snowflake schema are normalized, meaning they are further divided into
+                            sub-dimensions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Structure:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The fact table sits at the center, surrounded by normalized dimension tables. Each dimension
+                            table is often divided into sub-dimensions, forming a structure that resembles the shape of
+                            a snowflake.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Components:</b></p>
+
+                <p><b>Fact Table:</b> The central table containing quantitative and numeric data (measures) related to
+                    business processes or events.</p>
+
+                <p><b>Dimension Tables:</b> These tables store descriptive attributes or dimensions related to the
+                    business process. Unlike the star schema, dimension tables in a snowflake schema may have multiple
+                    levels of normalization, leading to sub-dimensions.</p>
+
+                <p><b>4. Normalization in Snowflake Schema:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables in a snowflake schema are normalized to reduce redundancy and improve data
+                            integrity. This involves breaking down the dimension tables into sub-dimensions, creating a
+                            more structured and normalized database.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Advantages:</b></p>
+
+                <p><b>Normalizing Data:</b> Reduces redundancy in dimension tables, saving storage space.</p>
+
+                <p><b>Improved Data Integrity:</b> Ensures that data is consistent and accurate.</p>
+
+                <p><b>Ease of Maintenance:</b> Easier to update and maintain due to the normalized structure.</p>
+
+                <p><b>6. Disadvantages:</b></p>
+
+                <p><b>Complexity:</b> More complex to understand and query compared to a star schema.</p>
+
+                <p><b>Query Performance:</b> May result in slower query performance due to multiple joins.</p>
+
+                <p><b>7. Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a retail data warehouse, a snowflake schema might have a fact table recording sales
+                            transactions, and dimension tables for products, customers, time, and locations. The
+                            dimension tables, such as the product dimension, may be further divided into sub-dimensions
+                            like product category and supplier.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Querying:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Queries in a snowflake schema involve more joins compared to a star schema. Users need to
+                            navigate through multiple levels of normalization, which can make queries more complex and
+                            potentially slower.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Hierarchy in Snowflake Schema:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables in a snowflake schema often have hierarchical structures. For example, a
+                            time dimension may have hierarchies like year, quarter, month, and day, and each of these
+                            levels could be a separate table.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a human resources data warehouse, a snowflake schema might have a fact table recording
+                            employee performance metrics, and dimension tables for employees, departments, and time. The
+                            employee dimension may be normalized into sub-dimensions for personal details and job
+                            history.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Snowflake schemas are often used in scenarios where data integrity is a top priority and
+                            storage space efficiency is crucial. They may be preferred in environments where data
+                            updates and maintenance are frequent.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Like star schemas, snowflake schemas are scalable and can handle large volumes of data. The
+                            normalization, however, may introduce additional complexity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding the snowflake schema is important for data warehouse designers and administrators,
+                    especially when making decisions about schema design based on the specific requirements and
+                    trade-offs of a given project.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>Delta Lake is an open-source storage layer that brings ACID (Atomicity, Consistency, Isolation,
+                    Durability) transactions to Apache Spark and big data workloads. It is designed to address
+                    challenges associated with large-scale data processing, data quality, and reliability in data lakes.
+                    Delta Lake provides a reliable and scalable platform for managing both batch and streaming data,
+                    offering features such as ACID transactions, schema enforcement, and data versioning. Here are key
+                    features and concepts associated with Delta Lake:</p>
+
+                <h4>Key Features:</h4><br>
+
+                <p><b>1. ACID Transactions:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake supports ACID transactions, ensuring that data operations are Atomic, Consistent,
+                            Isolated, and Durable. This is particularly important in scenarios where data consistency
+                            and reliability are critical.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Schema Evolution:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake allows for schema evolution, enabling changes to the table schema over time. This
+                            flexibility is useful when dealing with evolving data sources and changing business
+                            requirements.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Time Travel:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The time travel feature in Delta Lake allows users to query the state of the data at a
+                            specific point in time. This is achieved by keeping track of different versions of the data,
+                            facilitating historical analysis and auditing.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Data Versioning:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake automatically versions the data, providing a history of changes. This versioning
+                            enables rollbacks, auditability, and the ability to recover from errors or data corruption.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Schema Enforcement:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake can enforce schema constraints on data writes, ensuring that incoming data
+                            adheres to a predefined schema. This helps maintain data quality and consistency.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Streaming and Batch Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake supports both batch and streaming processing. It seamlessly integrates with
+                            Apache Spark Structured Streaming, allowing for real-time data ingestion and analytics.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Compatibility with Spark Ecosystem:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake is fully compatible with the Apache Spark ecosystem, making it easy to integrate
+                            with existing Spark workflows and applications.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Unified Batch and Streaming:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake provides a unified batch and streaming processing model. This enables
+                            organizations to use a single system for both types of data processing, simplifying the
+                            overall architecture.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Use Cases:</h4><br>
+
+                <p><b>1. Data Warehousing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake is suitable for building data warehouses where the focus is on analytics,
+                            reporting, and querying historical data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Streaming Analytics:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The ability to handle streaming data makes Delta Lake suitable for use cases involving
+                            real-time analytics and processing of continuously ingested data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Quality and Reliability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Organizations use Delta Lake to improve data quality and reliability by ensuring ACID
+                            transactions and maintaining a versioned and auditable history of data changes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Machine Learning:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake can be used as a storage layer for machine learning pipelines, supporting
+                            reliable and versioned data for model training and evaluation.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Historical Analysis:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The time travel feature in Delta Lake makes it well-suited for historical analysis and trend
+                            analysis by providing access to data at different points in time.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Delta Lake Architecture:</h4><br>
+
+                <p>Delta Lake is built on top of Apache Spark and utilizes parquet files for storage. It introduces a
+                    transaction log and metadata management to provide the additional features such as ACID
+                    transactions, schema evolution, and time travel.</p>
+
+                <p><b>1. Transaction Log:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake uses a transaction log to record every change made to the table. This log ensures
+                            ACID properties and provides the ability to recover from failures.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Metadata Management:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake maintains metadata to keep track of schema evolution, data versioning, and other
+                            information needed for managing data consistency and reliability.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Parquet Storage:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake stores data in Apache Parquet format, which is a columnar storage format
+                            optimized for analytical processing. This enables efficient compression and query
+                            performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Delta Table:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A Delta table is a collection of data files and a transaction log. It appears to Spark
+                            applications as a regular table, making it easy to interact with using Spark SQL or
+                            DataFrame APIs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Delta Lake is often used in conjunction with cloud-based storage solutions such as AWS S3, Azure Data
+                    Lake Storage, or Google Cloud Storage, providing a scalable and cost-effective foundation for
+                    managing big data workloads.</p>
+
+                <h4>Getting Started:</h4><br>
+
+                <p>To use Delta Lake, you can typically follow these steps:</p>
+
+                <p><b>1. Install Delta Lake:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake can be installed as a Spark library or package. You can include it in your Spark
+                            application or notebook to start using Delta Lake features.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Create Delta Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Create Delta tables using Spark SQL or DataFrame APIs. Delta tables are similar to regular
+                            Spark tables but come with additional features like ACID transactions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Perform Data Operations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Use Spark SQL or DataFrame APIs to perform various data operations such as inserts, updates,
+                            deletes, and schema evolution on Delta tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Query Data:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Query Delta tables using Spark SQL or DataFrame APIs. Take advantage of time travel to query
+                            data at specific points in time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Explore Time Travel and Versioning:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Experiment with Delta Lake's time travel features to explore different versions of your data
+                            and understand how changes have evolved over time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Delta Lake provides a powerful and reliable solution for managing big data workloads, offering
+                    features that enhance data quality, consistency, and analytics capabilities in a distributed
+                    computing environment.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

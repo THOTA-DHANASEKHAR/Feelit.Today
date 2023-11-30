@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Operational Data Store (ODS):</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>An Operational Data Store (ODS) is a centralized database that provides an integrated,
+                            subject-oriented, and current view of an organization's operational data. It acts as a
+                            staging area between operational systems and a data warehouse, facilitating real-time or
+                            near-real-time reporting and analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Key Characteristics:</b></p>
+
+                <p><b>Integrated Data:</b> The ODS integrates data from various operational sources, providing a
+                    consolidated view.</p>
+
+                <p><b>Current Data:</b> ODS contains the most recent operational data, making it suitable for real-time
+                    or near-real-time reporting.</p>
+
+                <p><b>Subject-Oriented:</b> ODS is organized around business subjects or areas, making it more
+                    business-friendly for reporting and analysis.</p>
+
+                <p><b>3. Purpose and Functions:</b></p>
+
+                <p><b>Real-Time Reporting:</b> Supports real-time reporting and analysis by providing the most recent
+                    operational data.</p>
+
+                <p><b>Data Integration:</b> Serves as a staging area for integrating data from multiple operational
+                    systems before loading it into a data warehouse.</p>
+
+                <p><b>Data Cleansing:</b> Often involves data cleansing and transformation to ensure the accuracy and
+                    consistency of the integrated data.</p>
+
+                <p><b>Subject-Oriented Views:</b> Organizes data based on business subjects or areas to facilitate
+                    business analysis.</p>
+
+                <p><b>4. Relationship with Data Warehouse:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The ODS is positioned between operational systems and a data warehouse. It serves as a
+                            bridge, providing a more immediate and integrated view of operational data for reporting and
+                            analysis before data is further processed and loaded into the data warehouse.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Data Transformation:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ODS may involve data transformation processes to ensure that the integrated data is in a
+                            consistent and usable format. This may include cleaning, deduplication, and standardization.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Data Sources:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data in the ODS is sourced from various operational systems, such as transactional
+                            databases, CRM systems, ERP systems, and other sources that generate and update data in
+                            real-time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Data Delivery:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ODS delivers data to downstream systems, including data warehouses, business intelligence
+                            tools, and other reporting systems. It acts as a source of relatively fresh, cleansed, and
+                            integrated data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Historical Data:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While ODS primarily focuses on current or near-real-time data, some ODS implementations may
+                            retain historical data for a limited time to support trend analysis and historical
+                            reporting.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ODS systems are designed to handle high volumes of operational data efficiently. Scalability
+                            is a key consideration to ensure that the ODS can support the growing data needs of an
+                            organization.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Query Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ODS systems are optimized for fast query performance to support real-time reporting
+                            requirements. Indexing and performance tuning are often implemented to ensure
+                            responsiveness.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Comparison with Data Warehouse:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While a data warehouse is optimized for historical analysis and strategic reporting, an ODS
+                            is designed for more immediate operational reporting and analysis. The two systems
+                            complement each other in an enterprise's data architecture.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a retail environment, an ODS might integrate data from point-of-sale systems, inventory
+                            systems, and customer relationship management (CRM) systems, providing a consolidated and
+                            near-real-time view of sales, inventory, and customer interactions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>13. Challenges:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ODS implementations may face challenges related to data consistency, data quality, and the
+                            need for real-time data integration. Managing the integration of data from diverse
+                            operational systems can be complex.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Implementing an Operational Data Store is beneficial for organizations that require real-time or
+                    near-real-time access to integrated operational data for reporting and analysis, helping them make
+                    informed decisions based on the most recent information.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

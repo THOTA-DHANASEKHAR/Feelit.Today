@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>index</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>What is Data warehousing ?</h4>
+                <p>Data warehousing is a process of collecting, storing, and managing data from different sources to
+                    provide meaningful insights and support informed decision-making within an organization. The core
+                    idea behind data warehousing is to create a centralized repository that consolidates data from
+                    various operational sources and transforms it into a format suitable for analytical processing and
+                    reporting. The resulting data warehouse serves as a foundation for business intelligence (BI) and
+                    analytics.</p>
+                    <b>What is data warehouse</b>
+                <p>A data warehouse is a large, centralized repository of data that is used for reporting and analysis. It is designed to
+                support the efficient querying and analysis of large volumes of data, typically from various sources within an
+                organization. The primary goal of a data warehouse is to provide a unified and historical view of the organization's
+                data, making it easier for decision-makers to derive insights and make informed decisions.</p>
+
+                <p>Here are key components and concepts associated with data warehousing:</p>
+
+                <p><b>1. Data Sources:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data warehouses integrate data from diverse sources, including operational databases,
+                            spreadsheets, external systems, and other data repositories. These sources may span
+                            different departments and business processes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. ETL (Extract, Transform, Load):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The ETL process involves extracting data from source systems, transforming it into a
+                            consistent and standardized format, and loading it into the data warehouse. This process
+                            ensures that data is cleansed, enriched, and structured for analytical purposes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Warehouse Architecture:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data warehouses typically follow a structured architecture, such as the star schema or
+                            snowflake schema. These architectures involve organizing data into fact tables (containing
+                            quantitative measures) and dimension tables (containing descriptive attributes), creating a
+                            relational model for efficient querying.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Centralized Repository:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The data warehouse serves as a centralized repository that stores both current and
+                            historical data. This historical data allows for trend analysis, forecasting, and
+                            comparisons over time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Business Intelligence (BI) and Analytics:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data warehousing supports business intelligence and analytics initiatives by providing a
+                            platform for querying, reporting, and data visualization. Users can analyze data to gain
+                            insights into business performance, identify trends, and make informed decisions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Query and Reporting Tools:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data warehouses are accessed through query and reporting tools that enable users to interact
+                            with the data. These tools provide a user-friendly interface for running queries, creating
+                            reports, and visualizing results.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Metadata Management:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Metadata, which includes information about the data structure, definitions, and
+                            relationships, is a critical aspect of data warehousing. Effective metadata management
+                            ensures that users understand and interpret data consistently across the organization.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data warehouses are designed to scale as data volumes grow. This scalability is crucial for
+                            accommodating increasing amounts of data and supporting the evolving analytical needs of the
+                            organization.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Data Governance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data governance practices are implemented to ensure the quality, security, and integrity of
+                            the data within the data warehouse. This involves establishing policies, procedures, and
+                            controls for managing data throughout its lifecycle.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Real-Time Data Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Some modern data warehouses support real-time or near-real-time data processing, allowing
+                            organizations to analyze and act on the latest data as it becomes available.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Data Mart:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A data mart is a subset of a data warehouse that focuses on a specific business function,
+                            department, or user group. Data marts provide more targeted and streamlined access to data
+                            for particular purposes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Cloud Data Warehousing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>With the advent of cloud computing, many organizations are adopting cloud-based data
+                            warehouses. Cloud data warehouses offer scalability, flexibility, and cost-effectiveness,
+                            allowing organizations to leverage computing resources on-demand.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>In summary, data warehousing is a strategic approach to data management that empowers organizations
+                    to consolidate and analyze data for business insights. It plays a crucial role in supporting
+                    decision-making processes and fostering a data-driven culture within an organization.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

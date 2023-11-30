@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Slowly Changing Dimension (SCD):</h4>
+
+                <p>A Slowly Changing Dimension (SCD) is a concept in data warehousing that refers to how dimensional
+                    data changes over time and how these changes are managed within a data warehouse. SCDs are
+                    particularly important when dealing with historical data or data that evolves and undergoes
+                    modifications over different time periods.</p>
+
+                <p>There are three common types of Slowly Changing Dimensions:</p>
+
+                <p><b>1. Type 1 Overwrite (Fixed):</b></p>
+
+                <p><b>Description:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a Type 1 SCD, changes to the dimension attributes are handled by overwriting the existing
+                            data with the new data. No history of changes is maintained.</li>
+
+                        <li><b>Use Case:</b></li>
+
+                        <li>Appropriate when historical changes are not important, and only the current state of the
+                            dimension is needed.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Type 2 Add New Row (Historical):</b></p>
+
+                <p><b>Description:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a Type 2 SCD, when a dimension attribute changes, a new row is added to the dimension
+                            table with the updated data. The existing row remains unchanged, and historical changes are
+                            tracked.</li>
+
+                        <li><b>Attributes:</b></li>
+
+                        <li>Typically includes additional columns such as start date, end date, and a surrogate key to
+                            uniquely identify each version of the dimension row.</li>
+
+                        <li><b>Use Case:</b></li>
+
+                        <li>Suitable when historical changes need to be preserved, and the history of the dimension is
+                            essential for analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Type 3 Add New Attribute (Semi-Historical):</b></p>
+
+                <p><b>Description:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a Type 3 SCD, a limited history is maintained by adding columns to the dimension table to
+                            store both the current and previous values of an attribute. This allows tracking of selected
+                            historical changes.</li>
+
+                        <li><b>Attributes:</b></li>
+
+                        <li>Includes columns for the current and previous values of the attribute being tracked.</li>
+
+                        <li><b>Use Case:</b></li>
+
+                        <li>Useful when only certain attributes need historical tracking, and a limited history is
+                            sufficient.</li>
+
+                    </ul>
+                </div><br>
+
+                <br>
+                <h4>Key Considerations for Slowly Changing Dimensions:</h4>
+
+                <p><b>1. Business Requirements:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Understanding business requirements is crucial in choosing the appropriate SCD type.
+                            Consider whether historical changes are significant for reporting and analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Performance Impact:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Each SCD type has different performance implications. Type 1 is the simplest but provides no
+                            historical tracking, while Type 2 and Type 3 offer historical information with potential
+                            impacts on storage and query performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Volume:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The volume of data and the frequency of changes influence the choice of SCD type. Type 2 can
+                            result in a larger table size due to historical versions, while Type 1 keeps the table size
+                            constant.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Query Complexity:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The choice of SCD type can affect the complexity of queries. Type 2 and Type 3 may require
+                            more complex queries to retrieve the correct version of dimension data for a specific point
+                            in time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Data Warehousing Tools:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Some data warehousing tools and ETL (Extract, Transform, Load) processes provide built-in
+                            support for managing Slowly Changing Dimensions. Understanding the capabilities of the tools
+                            being used is important.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Integration with ETL Processes:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes that load data into the data warehouse need to be designed to handle the
+                            chosen SCD type. This includes identifying changes and updating the dimension tables
+                            accordingly.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Auditing and Logging:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Implementing auditing and logging mechanisms is essential to track changes made to dimension
+                            tables over time. This ensures data integrity and provides a trail for analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding and appropriately implementing Slowly Changing Dimensions are critical aspects of
+                    designing a data warehouse that effectively captures and manages historical changes in dimension
+                    data, supporting accurate and meaningful analysis over time.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Normalization in Database Design:</h4>
+
+                <p>Normalization is a process in database design that aims to organize and structure data in a
+                    relational database to reduce redundancy, eliminate data anomalies, and improve data integrity. The
+                    normalization process involves decomposing tables into smaller, more manageable structures, adhering
+                    to specific rules known as normal forms. The most common normal forms are First Normal Form (1NF),
+                    Second Normal Form (2NF), and Third Normal Form (3NF).</p>
+
+                <h4>Key Normal Forms:</h4><br>
+
+                <p><b>1. First Normal Form (1NF):</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A relation is in 1NF if it contains only atomic (indivisible) values and there are no
+                            repeating groups or arrays.</li>
+
+                        <li><b>Example:</b></li>
+
+                        <li>| StudentID | Courses |</li>
+
+                    </ul>
+                </div><br>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>101</th>
+                            <th>Math</th>
+                            <th>Physics</th>
+                            <th>Chem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>This table is not in 1NF because the "Courses" column contains a list of values.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Second Normal Form (2NF):</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A relation is in 2NF if it is in 1NF and all non-key attributes are fully functionally
+                            dependent on the primary key.</li>
+
+                        <li><b>Example:</b></li>
+
+                        <li>| StudentID | CourseID | Instructor |</li>
+
+                    </ul>
+                </div><br>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>101</th>
+                            <th>MATH101</th>
+                            <th>Dr.Smith</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>PHYS101</td>
+                            <td>Dr.Johnson</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>This table is in 2NF because "Instructor" depends on the entire primary key {StudentID,
+                            CourseID}.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Third Normal Form (3NF):</b></p>
+
+                <p><b>Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A relation is in 3NF if it is in 2NF and there are no transitive dependencies, meaning no
+                            non-key attribute depends on another non-key attribute.</li>
+
+                        <li><b>Example:</b></li>
+
+                        <li>| StudentID | CourseID | Instructor | Department |</li>
+
+                    </ul>
+                </div><br>
+
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <tr style="text-align: left;">
+                            <th>101</th>
+                            <th>MATH101</th>
+                            <th>Dr.Smith</th>
+                            <th>Mathematics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>PHYS101</td>
+                            <td>Dr.Johnson</td>
+                            <td>Physics</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>This table is in 3NF because "Department" depends only on the primary key {CourseID}, not on
+                            other non-key attributes.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Benefits of Normalization:</h4><br>
+
+                <p><b>1. Reduction of Redundancy:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Normalization eliminates redundancy by organizing data into separate tables, reducing the
+                            need to store the same information in multiple places.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Data Integrity:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>By eliminating data anomalies (such as update anomalies, insert anomalies, and delete
+                            anomalies), normalization helps maintain data integrity and consistency.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Simplified Updates:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Updates to the database are simplified because changes need to be made in only one place
+                            (the table where the data is stored).</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Enhanced Query Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Normalization can lead to more efficient queries by reducing the amount of redundant data
+                            that needs to be processed.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Considerations and Drawbacks:</h4><br>
+
+                <p><b>1. Trade-off with Query Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While normalization reduces redundancy, it can sometimes lead to more complex queries
+                            involving multiple tables and joins, which may impact performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Application Context:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The level of normalization applied depends on the specific requirements of the application.
+                            In some cases, denormalization (introducing redundancy) may be necessary for performance
+                            reasons.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Balance with Denormalization:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In certain scenarios, a balance between normalization and denormalization is required to
+                            optimize both data integrity and query performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Understanding Business Rules:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Designers need a clear understanding of the business rules and relationships between
+                            entities to apply normalization effectively.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Normalization is a fundamental concept in relational database design, and its application depends on
+                    the specific needs and goals of the organization or application being developed.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

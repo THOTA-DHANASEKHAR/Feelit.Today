@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>OLTP (Online Transaction Processing):</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP (Online Transaction Processing) is a class of systems that facilitates and manages
+                            transaction-oriented applications, typically for day-to-day business operations. It is
+                            designed to efficiently process a large number of transactions in real-time.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Characteristics of OLTP:</b></p>
+
+                <p><b>Transaction-oriented:</b> OLTP systems focus on handling individual transactions, such as
+                    inserting, updating, or deleting records in a database.</p>
+
+                <p><b>Concurrent Users:</b> Supports a large number of concurrent users who perform transactions
+                    simultaneously.</p>
+
+                <p><b>Fast Response Time:</b> Designed for quick and efficient transaction processing to support
+                    real-time business operations.</p>
+
+                <p><b>Normalized Data:</b> Typically employs normalized database schemas to minimize redundancy and
+                    maintain data integrity.</p>
+
+                <p><b>3. Transactions:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A transaction in OLTP refers to a single, logical unit of work that involves one or more
+                            database operations. It follows the ACID properties (Atomicity, Consistency, Isolation,
+                            Durability) to ensure data integrity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Data Modeling in OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems often use normalized data models, where data is organized into tables with
+                            minimal redundancy. This reduces the risk of data anomalies and ensures efficient updates.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Typical Operations:</b></p>
+
+                <p><b>Inserts:</b> Adding new records to the database.</p>
+
+                <p><b>Updates:</b> Modifying existing records to reflect changes.</p>
+
+                <p><b>Deletes:</b> Removing records from the database.</p>
+
+                <p><b>Queries:</b> Retrieving specific pieces of information from the database.</p>
+
+                <p><b>6. Performance Considerations:</b></p>
+
+                <p><b>Indexing:</b> Efficient indexing is crucial for fast retrieval of specific records.</p>
+
+                <p><b>Concurrency Control:</b> Mechanisms to handle simultaneous transactions without data conflicts.
+                </p>
+
+                <p><b>Normalization:</b> Structuring data to minimize redundancy and maintain consistency.</p>
+
+                <p><b>7. Data Integrity:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Ensuring the accuracy and consistency of data is a key focus in OLTP systems. Referential
+                            integrity constraints are commonly used to maintain relationships between tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems are designed to scale horizontally to handle an increasing number of
+                            transactions and users. This often involves the use of distributed databases and load
+                            balancing.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Examples of OLTP Systems:</b></p>
+
+                <p><b>Point of Sale (POS) Systems:</b> Recording sales transactions in retail environments.</p>
+
+                <p><b>Order Processing Systems:</b> Managing orders and inventory in e-commerce.</p>
+
+                <p><b>Banking Systems:</b> Handling transactions such as deposits, withdrawals, and transfers.</p>
+
+                <p><b>Airline Reservation Systems:</b> Managing ticket bookings and changes.</p>
+
+                <p><b>10. Data Warehousing vs. OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems focus on transactional processing for day-to-day operations, while data
+                            warehousing (OLAP) is designed for analytical processing and reporting.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Real-time Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems are designed to process transactions in real-time, providing immediate updates
+                            to the database.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Challenges:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Managing a high volume of simultaneous transactions while maintaining data consistency can
+                            pose challenges, and careful system design is required to address these issues.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding OLTP is crucial for designing systems that support the operational needs of businesses,
+                    ensuring the efficient and reliable processing of transactions in real-time.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Data Modeling:</h4>
+
+                <p>Data modeling is a process of defining and organizing data structures to represent information,
+                    relationships, and constraints within a system or organization. It serves as a blueprint for
+                    designing and implementing databases, guiding the development of software systems, and facilitating
+                    communication between stakeholders involved in the data management process. Here are key aspects of
+                    data modeling:</p>
+
+                <p><b>1. Types of Data Models:</b></p>
+
+                <p><b>Conceptual Data Model:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Focuses on high-level business concepts and relationships without delving into technical
+                            details. It provides a broad overview of the data requirements and is often presented in an
+                            entity-relationship diagram.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Logical Data Model:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Translates the conceptual data model into a more detailed representation, using entities,
+                            attributes, relationships, and data types. It is technology-independent and serves as a
+                            bridge between the conceptual model and the physical implementation.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Physical Data Model:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Specifies how the logical data model will be implemented in a specific database management
+                            system (DBMS). It includes details such as table structures, indexes, constraints, and
+                            storage parameters.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Entity-Relationship Diagrams (ERD):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ERDs visually represent the relationships between entities in a system. Entities are
+                            represented as rectangles, and relationships are depicted by lines connecting them.
+                            Attributes describe the properties of entities.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Normalization:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Normalization is the process of organizing data to minimize redundancy and dependency by
+                            decomposing tables into smaller, more manageable structures. Normal forms, such as First
+                            Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF), are used to guide
+                            the normalization process.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Denormalization:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While normalization reduces redundancy, denormalization involves reintroducing redundancy to
+                            improve query performance. Denormalization is often applied in data warehousing scenarios
+                            where fast query response is prioritized over data update efficiency.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Data Definition Language (DDL):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>DDL is used to define and manage the structure of a database, including creating and
+                            altering tables, specifying constraints, and defining indexes. SQL (Structured Query
+                            Language) is commonly used for DDL operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Data Manipulation Language (DML):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>DML is used to manipulate data stored in the database, including operations such as
+                            inserting, updating, and deleting records. SQL is also used for DML operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Cardinality:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Cardinality in data modeling defines the relationship between two entities, indicating how
+                            many instances of one entity are related to another. Common cardinalities include
+                            one-to-one, one-to-many, and many-to-many.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Data Integrity:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Ensuring data integrity is a critical aspect of data modeling. This involves defining
+                            constraints, such as primary keys, foreign keys, unique constraints, and check constraints,
+                            to maintain data accuracy and consistency.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Surrogate Keys:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Surrogate keys are artificial, system-generated keys used as primary keys in database
+                            tables. They are often integers and provide a stable reference to records, especially in
+                            situations where natural keys may change.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Metadata:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Metadata is data about data. In data modeling, metadata includes information about entities,
+                            attributes, relationships, constraints, and other aspects of the data model. Proper metadata
+                            management is crucial for documentation and understanding the data model.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Data Modeling Tools:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Various tools, such as ERwin, Microsoft Visio, and Oracle SQL Developer Data Modeler,
+                            facilitate the creation, visualization, and maintenance of data models.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Data Modeling Notations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Notations like Barker's notation, Crow's Foot notation, and UML (Unified Modeling Language)
+                            notation are used to represent entities, attributes, relationships, and other components in
+                            data models.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>13. Agile Data Modeling:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In Agile development methodologies, data modeling is often done iteratively and
+                            collaboratively, with a focus on delivering value quickly and adapting to changing
+                            requirements.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Data modeling is an essential part of the database design process, ensuring that data is organized,
+                    structured, and represented in a way that meets the business requirements while supporting efficient
+                    data storage and retrieval.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

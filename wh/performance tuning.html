@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>Performance tuning is the process of optimizing the performance of a system or application to ensure
+                    it operates efficiently, responds quickly, and meets the performance requirements and expectations
+                    of users. In the context of databases and data warehouses, performance tuning is essential for
+                    improving query response times, optimizing resource utilization, and enhancing overall system
+                    efficiency. Here are key strategies and techniques for performance tuning:</p>
+
+                <p><b>1. Database Indexing:</b></p>
+
+                <p><b>Create Indexes:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Identify and create appropriate indexes on columns used in WHERE clauses, JOIN conditions,
+                            and ORDER BY clauses. Indexing can significantly improve query performance.</li>
+
+                        <li><b>Regularly Update Statistics:</b></li>
+
+                        <li>Keep database statistics up-to-date to help the query optimizer make informed decisions
+                            about execution plans.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Query Optimization:</b></p>
+
+                <p><b>Review and Refactor Queries:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Examine and optimize SQL queries to eliminate unnecessary joins, reduce data retrieval, and
+                            improve overall efficiency. Consider using tools or query analyzers to identify performance
+                            bottlenecks.</li>
+
+                        <li><b>Use Query Hints:</b></li>
+
+                        <li>In some database systems, query hints or directives can be used to influence the execution
+                            plan. However, use them judiciously, as they may not be portable across different database
+                            systems.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Partitioning:</b></p>
+
+                <p><b>Partition Large Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Partition large tables based on meaningful criteria (e.g., date ranges or key ranges).
+                            Partitioning can help improve query performance by minimizing the amount of data that needs
+                            to be scanned.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Materialized Views and Index Organized Tables (IOT):</b></p>
+
+                <p><b>Materialized Views:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Create materialized views for pre-aggregated or pre-joined data that is frequently queried.
+                            Materialized views store the results of a query, allowing for faster retrieval.</li>
+
+                        <li><b>Index Organized Tables (IOT):</b></li>
+
+                        <li>In some databases, IOTs can be used to store table data in a B-tree index structure,
+                            reducing the need for separate indexes and improving query performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Memory Management:</b></p>
+
+                <p><b>Allocate Sufficient Memory:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Ensure that the database server has sufficient memory to cache frequently accessed data and
+                            indexes. Adequate memory can reduce the need for disk I/O and improve query response times.
+                        </li>
+
+                        <li><b>Optimize Buffer Pool and Cache Settings:</b></li>
+
+                        <li>Adjust database settings related to buffer pools and caches based on available memory and
+                            workload characteristics.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Parallel Processing:</b></p>
+
+                <p><b>Parallelize Queries:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Configure the database to take advantage of parallel processing for complex queries.
+                            Parallel execution can significantly improve the speed of data-intensive operations.</li>
+
+                        <li><b>Partitioned Parallelism:</b></li>
+
+                        <li>In some databases, partitioned parallelism can be used to parallelize the processing of
+                            individual partitions in a table.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Disk I/O Optimization:</b></p>
+
+                <p><b>RAID Configuration:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Optimize the RAID configuration for database storage to balance performance and fault
+                            tolerance.</li>
+
+                        <li><b>Separate Data and Log Files:</b></li>
+
+                        <li>Store data and log files on separate disk drives to reduce contention and improve I/O
+                            performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Compression:</b></p>
+
+                <p><b>Use Data Compression:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Implement data compression techniques for large tables or indexes to reduce storage
+                            requirements and improve I/O performance.</li>
+
+                        <li><b>Query Result Compression:</b></li>
+
+                        <li>Some databases allow for query result compression, which can be useful for reducing the
+                            amount of data transferred over the network.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Caching Mechanisms:</b></p>
+
+                <p><b>Query and Result Caching:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Utilize query caching and result caching mechanisms provided by the database to store
+                            frequently accessed query results in memory.</li>
+
+                        <li><b>Application-level Caching:</b></li>
+
+                        <li>Implement caching at the application level to store and reuse frequently accessed data,
+                            reducing the need for repeated database queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Regular Maintenance Tasks:</b></p>
+
+                <p><b>Index Rebuilding and Defragmentation:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Regularly rebuild or defragment indexes to maintain optimal index structures.</li>
+
+                        <li><b>Statistics Update:</b></li>
+
+                        <li>Schedule regular updates for database statistics to ensure accurate query optimization.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Logging and Monitoring:</b></p>
+
+                <p><b>Performance Monitoring:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Use monitoring tools to continuously monitor database performance and identify potential
+                            bottlenecks.</li>
+
+                        <li><b>Query Execution Plans:</b></li>
+
+                        <li>Analyze query execution plans to understand how queries are being processed and identify
+                            areas for improvement.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Hardware Upgrades:</b></p>
+
+                <p><b>Evaluate Hardware:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Assess the hardware specifications of the database server and consider hardware upgrades,
+                            such as adding more CPU cores, increasing RAM, or using faster storage devices.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>13. Network Optimization:</b></p>
+
+                <p><b>Network Bandwidth:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Ensure sufficient network bandwidth between application servers and the database server,
+                            especially in distributed or cloud-based environments.</li>
+
+                        <li><b>Connection Pooling:</b></li>
+
+                        <li>Implement connection pooling to reduce the overhead of establishing and closing database
+                            connections.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>14. Database Version and Patching:</b></p>
+
+                <p><b>Keep Database Software Updated:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Regularly update the database management system (DBMS) software to benefit from performance
+                            improvements, bug fixes, and new features.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>15. Application Design Considerations:</b></p>
+
+                <p><b>Efficient Data Retrieval:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Design applications to retrieve only the necessary data, avoiding unnecessary data retrieval
+                            and processing.</li>
+
+                        <li><b>Minimize Round Trips:</b></li>
+
+                        <li>Minimize the number of round trips between the application and the database by batching or
+                            combining queries where possible.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Performance tuning is an ongoing process that requires a combination of expertise in database
+                    administration, query optimization, and system architecture. Regularly monitoring and assessing
+                    performance metrics, addressing bottlenecks, and implementing best practices contribute to a
+                    well-optimized and responsive database system.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

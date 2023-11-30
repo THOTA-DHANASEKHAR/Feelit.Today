@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Data Warehouse Architecture:</h4>
+
+                <p>Data warehouse architecture encompasses the design, structure, and integration of various components
+                    to create an efficient and effective environment for collecting, managing, and analyzing large
+                    volumes of data. Here are the key components and considerations in data warehouse architecture:</p>
+
+                <p><b>1. Source Systems:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Source systems are the operational databases or external systems from which data is
+                            extracted for the data warehouse. These can include transactional databases, ERP systems,
+                            CRM systems, flat files, and more.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. ETL (Extract, Transform, Load):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes involve extracting data from source systems, transforming it to fit the data
+                            warehouse schema, and loading it into the data warehouse. ETL tools, such as Informatica,
+                            Talend, and Microsoft SSIS, are commonly used for this purpose.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Staging Area:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The staging area is an intermediate storage location where extracted data is temporarily
+                            stored before being transformed and loaded into the data warehouse. It allows for data
+                            validation, error handling, and consistency checks.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Data Warehouse Database:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The data warehouse database is the central repository that stores structured and organized
+                            data for analysis. It typically follows a star schema or snowflake schema design, consisting
+                            of fact tables and dimension tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Data Marts:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data marts are subsets of the data warehouse that focus on specific business areas or
+                            departments. They are designed to provide more targeted and streamlined access to data for
+                            specific user groups.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. OLAP (Online Analytical Processing):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li><b>OLAP is a category of tools and technologies that enable users to interactively analyze
+                                multidimensional data. OLAP facilitates complex queries and allows users to explore data
+                                from different perspectives. There are two main types:</b> MOLAP (Multidimensional OLAP)
+                            and ROLAP (Relational OLAP).</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Business Intelligence (BI) Layer:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The BI layer encompasses tools and applications that enable end-users to interact with and
+                            analyze data. This includes reporting tools, dashboards, ad-hoc query tools, and data
+                            visualization tools such as Tableau, Power BI, and QlikView.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Metadata Repository:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The metadata repository stores information about the data warehouse, including data
+                            definitions, data lineage, business rules, and other metadata. It is crucial for
+                            understanding and managing the data warehouse environment.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Data Quality and Cleansing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data quality processes ensure that data in the data warehouse is accurate, consistent, and
+                            reliable. Data cleansing involves identifying and correcting errors or inconsistencies in
+                            the data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Security and Access Control:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Security measures, including authentication and authorization, are implemented to control
+                            access to sensitive data in the data warehouse. User roles and permissions are defined to
+                            ensure that only authorized users can access specific data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Scalability and Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Architecture should be designed to handle the growing volume of data and user queries.
+                            Techniques such as partitioning, indexing, and materialized views are employed to optimize
+                            performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Backup and Recovery:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Robust backup and recovery mechanisms are essential to protect data in the event of system
+                            failures, data corruption, or other disasters. Regular backups and testing of recovery
+                            procedures are part of data warehouse maintenance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>13. Cloud Data Warehousing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Cloud-based data warehouses, such as Amazon Redshift, Google BigQuery, and Snowflake, have
+                            gained popularity. They offer scalability, flexibility, and the ability to leverage cloud
+                            resources.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>14. Data Governance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data governance policies and practices ensure that data is managed and used responsibly.
+                            This includes data stewardship, data ownership, and adherence to regulatory compliance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>15. Master Data Management (MDM):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>MDM involves managing the consistency and quality of master data across the organization. It
+                            ensures that critical data, such as customer and product information, is consistent and
+                            accurate across various systems.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>16. Monitoring and Performance Tuning:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Continuous monitoring of the data warehouse environment is essential for identifying and
+                            addressing performance issues. Performance tuning involves optimizing queries, indexes, and
+                            other aspects to improve overall system efficiency.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>A well-designed data warehouse architecture provides a foundation for effective data analysis,
+                    reporting, and decision-making within an organization. It aligns with business goals and supports
+                    the evolving data needs of users across different departments.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

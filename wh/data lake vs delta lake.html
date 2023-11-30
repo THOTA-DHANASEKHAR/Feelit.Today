@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>Data Lake and Delta Lake are both data storage solutions, but they have distinct characteristics and
+                    purposes. Let's compare Data Lake and Delta Lake in terms of key features, use cases, and
+                    considerations:</p>
+
+                <h4>Data Lake:</h4><br>
+
+                <p><b>1. Schema Flexibility:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data lakes are known for their schema-on-read approach, allowing users to store raw and
+                            diverse data without enforcing a predefined schema. The schema is applied at the time of
+                            data analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Data Variety:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data lakes can store various types of data, including structured, semi-structured, and
+                            unstructured data. This makes them suitable for handling a wide range of data sources.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Storage Cost:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data lakes often leverage cost-effective storage solutions, such as cloud-based object
+                            storage. This helps organizations manage large volumes of data without incurring high
+                            storage costs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data lakes are designed for horizontal scalability, enabling organizations to scale storage
+                            capacity easily as data volumes increase. They are well-suited for big data scenarios.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Query Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Query performance in data lakes can vary, especially when dealing with diverse and
+                            unstructured data. Performance optimization often relies on data partitioning and indexing.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Delta Lake:</h4><br>
+
+                <p><b>1. ACID Transactions:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake extends the capabilities of data lakes by providing ACID transactions. This
+                            ensures Atomicity, Consistency, Isolation, and Durability for data operations, enhancing
+                            data integrity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Schema Evolution:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake supports schema evolution, allowing changes to the table schema over time. This
+                            flexibility is beneficial for scenarios where data sources evolve, and the schema needs to
+                            adapt.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Time Travel:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake introduces the time travel feature, enabling users to query the state of the data
+                            at a specific point in time. This is achieved by keeping track of different versions of the
+                            data, facilitating historical analysis and auditing.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Data Versioning:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake automatically versions the data, providing a history of changes. This versioning
+                            enables rollbacks, auditability, and the ability to recover from errors or data corruption.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Unified Batch and Streaming:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Delta Lake provides a unified batch and streaming processing model. This integration with
+                            both batch and streaming workloads simplifies the overall architecture.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Use Cases:</h4><br>
+
+                <p><b>Data Lake Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Storing raw and diverse data.</li>
+
+                        <li>Handling large volumes of data with varying structures.</li>
+
+                        <li>Supporting a wide range of data processing and analytics workloads.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Delta Lake Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Improving data quality and reliability.</li>
+
+                        <li>Enabling ACID transactions for data consistency.</li>
+
+                        <li>Supporting schema evolution and time travel for advanced analytics.</li>
+
+                        <li>Unified storage for both batch and streaming processing.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Considerations:</h4><br>
+
+                <p><b>Data Lake Considerations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Schema-on-read approach provides flexibility but may require careful data interpretation
+                            during analysis.</li>
+
+                        <li>Performance optimization techniques, such as partitioning and indexing, are important for
+                            efficient queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Delta Lake Considerations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ACID transactions add consistency but may have some impact on write performance.</li>
+
+                        <li>Time travel and versioning features provide valuable capabilities for historical analysis
+                            but also contribute to storage costs.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>When to Use Each:</h4><br>
+
+                <p><b>Use Data Lake When:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>You need a flexible storage solution for raw and diverse data.</li>
+
+                        <li>Schema-on-read flexibility is crucial for your data processing needs.</li>
+
+                        <li>You are primarily dealing with large volumes of varied data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Use Delta Lake When:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ACID transactions are essential for maintaining data consistency.</li>
+
+                        <li>You require schema evolution to adapt to changing data sources.</li>
+
+                        <li>Time travel and data versioning features are necessary for historical analysis and auditing.
+                        </li>
+
+                        <li>Unified storage for both batch and streaming processing is a requirement.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>In summary, Data Lake is a versatile storage solution for raw and diverse data, while Delta Lake
+                    extends data lakes by providing ACID transactions, schema evolution, and time travel features for
+                    enhanced data reliability and advanced analytics capabilities. The choice between Data Lake and
+                    Delta Lake depends on the specific requirements of the use case and the level of data consistency
+                    and versioning needed.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

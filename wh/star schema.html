@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Star Schema:</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The star schema is a type of database schema commonly used in data warehousing. It is
+                            designed for efficient querying and reporting by organizing data into a central fact table
+                            surrounded by dimension tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Components:</b></p>
+
+                <p><b>Fact Table:</b> The central table containing quantitative and numeric data (measures) that
+                    represent the business processes or events. Each record in the fact table is associated with one or
+                    more dimension tables.</p>
+
+                <p><b>Dimension Tables:</b> These tables store descriptive attributes or dimensions related to the
+                    business process. They provide context and details about the data in the fact table.</p>
+
+                <p><b>3. Structure:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The fact table is connected to dimension tables through foreign key relationships.</li>
+
+                        <li>Dimension tables contain primary keys that link to foreign keys in the fact table.</li>
+
+                        <li>Dimension tables are typically smaller in size compared to the fact table.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Star Schema Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Consider a sales data warehouse. The fact table may contain sales transactions with measures
+                            such as sales amount, quantity sold, and discount. Dimension tables could include time,
+                            product, and customer details. The fact table would have foreign keys linking to the primary
+                            keys in the dimension tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Advantages:</b></p>
+
+                <p><b>Simplicity:</b> Easy to understand and query.</p>
+
+                <p><b>Performance:</b> Provides fast query performance for analytical and reporting tasks.</p>
+
+                <p><b>Flexibility:</b> Allows for easy expansion by adding new dimensions or measures.</p>
+
+                <p><b>6. Querying:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Queries in a star schema involve joining the fact table with one or more dimension tables.
+                            This structure simplifies queries and enables users to easily navigate through different
+                            dimensions for analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Dimension Hierarchies:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables often have hierarchical structures. For example, a time dimension may have
+                            hierarchies like year, quarter, month, and day. Users can drill down or roll up through
+                            these hierarchies for more detailed or summarized information.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Snowflake Schema vs. Star Schema:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a snowflake schema, dimension tables are normalized, meaning they are further divided
+                            into sub-dimensions. The star schema, in contrast, keeps dimension tables denormalized,
+                            simplifying the structure for ease of use and query performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a retail data warehouse, a star schema might have a fact table recording sales
+                            transactions and dimension tables for products, customers, time, and locations. The fact
+                            table would contain measures like sales amount and quantity sold, linked to dimension tables
+                            through foreign keys.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Star schemas are commonly used in scenarios where analytical and reporting queries are
+                            frequent, such as in business intelligence applications. They are well-suited for scenarios
+                            involving aggregations, summarizations, and ad-hoc querying.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Star schemas are scalable and can handle large volumes of data, making them suitable for
+                            data warehousing environments.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding and implementing the star schema is crucial for designing effective data warehouses
+                    that facilitate efficient querying and reporting, supporting the analytical needs of an
+                    organization.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

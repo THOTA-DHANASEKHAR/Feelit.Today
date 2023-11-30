@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>ETL (Extract, Transform, Load):</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL is a process in data warehousing and business intelligence that involves extracting data
+                            from source systems, transforming it into a format suitable for analysis, and loading it
+                            into a data warehouse.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Key Components:</b></p>
+
+                <p><b>Extract:</b> Retrieving data from source systems, which can include databases, applications, flat
+                    files, and more.</p>
+
+                <p><b>Transform:</b> Manipulating and converting data to conform to the standards of the target data
+                    warehouse or database. This involves cleaning, aggregating, and restructuring the data.</p>
+
+                <p><b>Load:</b> Loading the transformed data into the target data warehouse or database.</p>
+
+                <p><b>3. ETL Workflow:</b></p>
+
+                <p><b>Extraction:</b> Data is extracted from source systems using various methods, such as SQL queries,
+                    API calls, or file transfers.</p>
+
+                <p><b>Transformation:</b> Data undergoes cleansing, validation, aggregation, and other transformations
+                    to meet the requirements of the target system.</p>
+
+                <p><b>Loading:</b> Transformed data is loaded into the data warehouse, often using bulk loading
+                    techniques for efficiency.</p>
+
+                <p><b>4. Data Quality and Cleansing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes often include steps for data quality checks and cleansing to ensure the
+                            accuracy and integrity of the data being loaded into the data warehouse.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. ETL Tools:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes are facilitated by specialized ETL tools such as Informatica, Talend,
+                            Microsoft SSIS, Apache NiFi, and others. These tools provide a visual interface for
+                            designing and managing ETL workflows.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Incremental Loading:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes can be designed to load only the new or changed data since the last
+                            extraction, reducing processing time and optimizing resource usage. This is known as
+                            incremental loading.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Staging Area:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>An intermediate storage area, called the staging area, is often used during the ETL process
+                            to hold extracted data before transformation and loading. This facilitates error handling
+                            and data validation.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Surrogate Keys:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes often involve the assignment of surrogate keys, which are system-generated
+                            keys used as primary keys in data warehouse tables to ensure data integrity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Data Profiling:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data profiling is a step in the ETL process where the quality and structure of the source
+                            data are analyzed to identify patterns, anomalies, and potential issues.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Metadata Management:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes generate metadata, which is information about the data being processed.
+                            Metadata management is crucial for tracking and documenting data lineage, transformations,
+                            and dependencies.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Job Scheduling:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes are often scheduled to run at specific times, ensuring timely and consistent
+                            updates to the data warehouse. Job scheduling tools are used to manage the execution of ETL
+                            workflows.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Error Handling:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes include mechanisms for error detection and handling. Logging and alerting
+                            systems are used to notify administrators of any issues during the ETL execution.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>13. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes need to be scalable to handle growing volumes of data. This may involve
+                            parallel processing, distributed computing, and load balancing strategies.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>14. Data Warehouse Loading Strategies:</b></p>
+
+                <p><b>Full Load:</b> Loading all data from source systems.</p>
+
+                <p><b>Incremental Load:</b> Loading only the new or changed data.</p>
+
+                <p><b>Initial Load:</b> The first load of data into the data warehouse.</p>
+
+                <p><b>15. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Extracting sales data from a retail database, transforming it to standardize currency
+                            formats and calculate total sales, and loading the transformed data into a data warehouse
+                            for business analytics.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding ETL is fundamental to the success of data warehousing and business intelligence
+                    initiatives, as it ensures the timely, accurate, and consistent integration of data from diverse
+                    sources into a central repository for analysis.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

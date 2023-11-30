@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform) are two data integration approaches
+                    used in the process of moving and transforming data from source systems to a target destination,
+                    often a data warehouse. Both ETL and ELT play crucial roles in data integration, but they differ in
+                    the sequence of the data processing steps. Let's explore the key differences between ETL and ELT:
+                </p>
+
+                <h4>ETL (Extract, Transform, Load):</h4><br>
+
+                <p><b>1. Sequence of Operations:</b></p>
+
+                <p><b>Extract:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data is extracted from source systems, such as databases, applications, or external sources.
+                        </li>
+
+                        <li><b>Transform:</b></li>
+
+                        <li>Extracted data is transformed into the desired format, structure, or schema. Transformations
+                            may include cleaning, aggregating, or enriching the data.</li>
+
+                        <li><b>Load:</b></li>
+
+                        <li>Transformed data is loaded into the target data warehouse or database.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Centralized Processing:</b></p>
+
+                <p><b>Advantage:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes are typically performed in a centralized ETL server or engine. This
+                            centralization allows for consistent data transformations and simplifies the management of
+                            the ETL pipeline.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Batch Processing:</b></p>
+
+                <p><b>Execution:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes are often executed in batch mode, meaning that data is processed in predefined
+                            batches or scheduled intervals. This can lead to latency between data extraction and
+                            availability in the target system.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Schema-on-Write:</b></p>
+
+                <p><b>Data Transformation:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Transformations are applied to the data before loading it into the target system. This
+                            approach is known as "schema-on-write," where the target schema is defined during the ETL
+                            process.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Use Cases:</b></p>
+
+                <p><b>Common Scenarios:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL is often used in scenarios where data needs to be cleansed, integrated, and transformed
+                            before being loaded into a data warehouse. It is suitable for traditional data warehousing
+                            architectures.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>ELT (Extract, Load, Transform):</h4><br>
+
+                <p><b>1. Sequence of Operations:</b></p>
+
+                <p><b>Extract:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data is extracted from source systems, similar to ETL.</li>
+
+                        <li><b>Load:</b></li>
+
+                        <li>Extracted data is loaded directly into the target data warehouse without significant
+                            transformation.</li>
+
+                        <li><b>Transform:</b></li>
+
+                        <li>Transformations are applied to the data within the target data warehouse after it has been
+                            loaded.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Distributed Processing:</b></p>
+
+                <p><b>Advantage:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT processes leverage the processing power of the target data warehouse itself. The
+                            transformations are distributed across the data warehouse nodes, enabling parallel
+                            processing and utilizing the computing resources of the target system.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Real-Time or Near-Real-Time Processing:</b></p>
+
+                <p><b>Execution:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT processes can be executed in real-time or near-real-time, as the data is loaded into the
+                            target system before transformations take place. This reduces latency between data
+                            extraction and availability for analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Schema-on-Read:</b></p>
+
+                <p><b>Data Transformation:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Transformations are applied to the data within the target data warehouse, often using SQL
+                            queries or other processing capabilities of the data warehouse. This approach is known as
+                            "schema-on-read."</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Use Cases:</b></p>
+
+                <p><b>Common Scenarios:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ELT is well-suited for modern cloud-based data warehouses, where the data warehouse itself
+                            provides powerful processing capabilities. It is suitable for scenarios where the target
+                            system can handle transformations efficiently.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Considerations:</h4><br>
+
+                <p><b>Performance:</b></p>
+
+                <p><b>ETL:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes may involve heavy transformations before loading data into the target system,
+                            which can impact performance during the extraction and transformation phases.</li>
+
+                        <li><b>ELT:</b></li>
+
+                        <li>ELT leverages the processing power of the target system, leading to efficient
+                            transformations within the data warehouse. This can result in better performance for certain
+                            use cases.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Flexibility:</b></p>
+
+                <p><b>ETL:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL provides more flexibility in defining and enforcing data quality rules and
+                            transformations before data is loaded into the target system.</li>
+
+                        <li><b>ELT:</b></li>
+
+                        <li>ELT allows for flexibility in performing transformations within the data warehouse, taking
+                            advantage of its processing capabilities.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Tooling and Integration:</b></p>
+
+                <p><b>ETL:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Traditional ETL tools are often used for designing and managing ETL processes.</li>
+
+                        <li><b>ELT:</b></li>
+
+                        <li>ELT processes may rely on the native capabilities of the target data warehouse, reducing the
+                            need for external ETL tools.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>Latency:</b></p>
+
+                <p><b>ETL:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>ETL processes may introduce latency between data extraction and loading into the target
+                            system, especially in batch-oriented architectures.</li>
+
+                        <li><b>ELT:</b></li>
+
+                        <li>ELT processes, when executed in real-time or near-real-time, can reduce latency between data
+                            extraction and availability in the target system.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Use Cases:</h4><br>
+
+                <p><b>ETL Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Traditional data warehousing scenarios with complex data transformations before loading into
+                            the target system.</li>
+
+                        <li>When data quality rules need to be enforced during the extraction and transformation phases.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>ELT Use Cases:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Cloud-based data warehousing scenarios where the target system provides powerful processing
+                            capabilities.</li>
+
+                        <li>When real-time or near-real-time data processing and analysis are critical.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>In summary, the choice between ETL and ELT depends on factors such as the architecture of the target
+                    data warehouse, performance requirements, data transformation complexity etc.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

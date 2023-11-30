@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>OLAP (Online Analytical Processing):</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP (Online Analytical Processing) is a category of computer programs and capabilities that
+                            enable users to interactively analyze and explore multidimensional data sets. It provides a
+                            fast, intuitive way to perform complex and advanced analyses of data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Multidimensional Data Model:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems use a multidimensional data model, where data is organized into dimensions and
+                            measures. Dimensions represent the perspectives or attributes of the data, while measures
+                            are the numeric values being analyzed.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Types of OLAP:</b></p>
+
+                <p><b>ROLAP (Relational OLAP):</b> OLAP that relies on a relational database management system to store
+                    and manage multidimensional data.</p>
+
+                <p><b>MOLAP (Multidimensional OLAP):</b> OLAP that uses a multidimensional database management system
+                    specifically designed for OLAP operations.</p>
+
+                <p><b>HOLAP (Hybrid OLAP):</b> A combination of ROLAP and MOLAP, taking advantage of both relational and
+                    multidimensional databases.</p>
+
+                <p><b>4. OLAP Operations:</b></p>
+
+                <p><b>Slicing:</b> Examining a single "slice" of the data by selecting a specific value along one
+                    dimension.</p>
+
+                <p><b>Dicing:</b> Selecting a subcube of data by choosing specific values along multiple dimensions.</p>
+
+                <p><b>Pivoting:</b> Rotating the data to view it from a different perspective.</p>
+
+                <p><b>Drill Down:</b> Moving from a higher level of detail to a more detailed level.</p>
+
+                <p><b>Roll Up:</b> Moving from a detailed level to a higher, summarized level.</p>
+
+                <p><b>5. Dimensions and Measures:</b></p>
+
+                <p><b>Dimensions:</b> These are the categorical attributes or perspectives by which data is analyzed.
+                    Examples include time, geography, and product.</p>
+
+                <p><b>Measures:</b> These are the quantitative values or metrics being analyzed, such as sales revenue
+                    or quantity sold.</p>
+
+                <p><b>6. OLAP Cubes:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>An OLAP cube is a three-dimensional representation of data that allows for efficient and
+                            fast querying. It consists of dimensions, hierarchies, and measures.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Aggregation:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Aggregation involves summarizing data at different levels of granularity. OLAP systems
+                            pre-aggregate data to facilitate quick responses to user queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Advantages of OLAP:</b></p>
+
+                <p><b>Interactive Analysis:</b> Users can explore data and gain insights through a user-friendly
+                    interface.</p>
+
+                <p><b>Fast Query Performance:</b> OLAP cubes enable rapid querying and analysis, especially when dealing
+                    with large datasets.</p>
+
+                <p><b>Business Intelligence Support:</b> OLAP is a key component of business intelligence systems,
+                    supporting decision-making processes.</p>
+
+                <p><b>9. Disadvantages and Challenges:</b></p>
+
+                <p><b>Data Size:</b> Large datasets may require significant storage and processing power.</p>
+
+                <p><b>Complexity:</b> Designing and maintaining OLAP systems can be complex.</p>
+
+                <p><b>Real-time Data:</b> OLAP is typically used for historical and summarized data, and real-time data
+                    processing may be a challenge.</p>
+
+                <p><b>10. Applications:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP is widely used in various industries for tasks such as financial analysis, sales
+                            forecasting, and business performance monitoring.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. OLAP vs. OLTP (Online Transaction Processing):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP is designed for complex queries and analysis, while OLTP is optimized for transactional
+                            processing and day-to-day operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A business analyst using OLAP tools to explore sales data across different product
+                            categories, regions, and time periods to identify trends and opportunities.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>OLAP systems are integral to the field of business intelligence, providing a powerful means for users
+                    to analyze and gain insights from multidimensional datasets in a user-friendly and interactive
+                    manner.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

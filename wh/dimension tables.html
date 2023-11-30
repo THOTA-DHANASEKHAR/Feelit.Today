@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Dimension Tables:</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables are tables in a data warehouse that store descriptive attributes related to
+                            the business processes being analyzed. They provide context and additional details to the
+                            quantitative measures stored in fact tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Key Characteristics:</b></p>
+
+                <p><b>Descriptive Attributes:</b> Characteristics or dimensions related to the business process, such as
+                    product names, customer details, time periods, and geographic locations.</p>
+
+                <p><b>Primary Key:</b> A primary key uniquely identifying each record in the dimension table.</p>
+
+                <p><b>Foreign Key:</b> A foreign key linking to the primary key of the dimension table in the fact
+                    table.</p>
+
+                <p><b>3. Components of a Dimension Table:</b></p>
+
+                <p><b>Primary Key:</b> A unique identifier for each record in the dimension table.</p>
+
+                <p><b>Descriptive Attributes:</b> Columns containing information about the dimension, such as product
+                    names, customer IDs, or dates.</p>
+
+                <p><b>Hierarchy:</b> Some dimension tables may have hierarchical structures, such as product categories
+                    nested within product departments.</p>
+
+                <p><b>4. Types of Dimension Tables:</b></p>
+
+                <p><b>Conformed Dimension:</b> A dimension that is shared across multiple fact tables in a data
+                    warehouse. This ensures consistency in the way dimensions are represented and allows for easy
+                    integration of data from different sources.</p>
+
+                <p><b>Junk Dimension:</b> A dimension table that includes flags and indicators that do not fit into
+                    standard dimensions. It is created to simplify the data model.</p>
+
+                <p><b>Slowly Changing Dimension (SCD):</b> A dimension that changes over time. SCDs are classified into
+                    Type 1 (overwrite old values), Type 2 (add new records), and Type 3 (maintain both old and new
+                    values).</p>
+
+                <p><b>5. Hierarchical Structures:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Some dimension tables have hierarchical structures, representing different levels of
+                            granularity. For example, a time dimension may have hierarchies like year, quarter, month,
+                            and day.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Role of Dimension Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables provide descriptive context to the numeric measures in fact tables. They
+                            allow users to analyze and filter data based on various attributes related to the business
+                            process.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Foreign Key Relationships:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables are linked to fact tables through foreign key relationships. The foreign
+                            key in the fact table corresponds to the primary key in the dimension table, establishing a
+                            connection between the quantitative measures and descriptive attributes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a retail data warehouse, a dimension table for products might include attributes such as
+                            product ID, product name, category, supplier ID, and other details. The product dimension
+                            would be linked to a fact table containing sales transactions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Types of Dimensions:</b></p>
+
+                <p><b>Role-Playing Dimension:</b> A dimension table that is used in multiple roles in a single fact
+                    table. For example, a date dimension might be used for both order date and ship date in a sales fact
+                    table.</p>
+
+                <p><b>Degenerate Dimension:</b> A dimension that exists in the fact table rather than having a separate
+                    dimension table. An example is an order number that doesn't have many descriptive attributes.</p>
+
+                <p><b>10. Design Considerations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables should be designed to support efficient querying and analysis.
+                            Considerations include granularity, hierarchies, and the need for slowly changing dimensions
+                            based on business requirements.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Data Types in Dimension Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The choice of data types in dimension tables should align with the nature of the descriptive
+                            attributes. For example, use string data types for names, date data types for date-related
+                            attributes, and numerical data types for numeric attributes.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Usage in Business Intelligence:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Dimension tables are crucial for creating meaningful reports, dashboards, and analytics in
+                            business intelligence applications. They allow users to analyze data from different
+                            perspectives and dimensions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding how to design and use dimension tables is essential for building a well-structured and
+                    efficient data warehouse that supports meaningful analysis and reporting in business intelligence
+                    environments.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

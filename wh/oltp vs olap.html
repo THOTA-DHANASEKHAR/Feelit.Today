@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) are two distinct types
+                    of systems that serve different purposes in the field of database management and data processing.
+                    Let's compare OLTP and OLAP based on key characteristics:</p>
+
+                <h4>OLTP (Online Transaction Processing):</h4><br>
+
+                <p><b>1. Purpose:</b></p>
+
+                <p><b>Transaction Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems are designed for handling transactional workloads, where the primary focus is
+                            on managing and processing day-to-day business transactions. Examples include order
+                            processing, inventory management, and online banking.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Database Design:</b></p>
+
+                <p><b>Normalized Schema:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP databases typically use a normalized schema to minimize redundancy and ensure data
+                            consistency. This is crucial for supporting efficient transactional operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Characteristics:</b></p>
+
+                <p><b>Current and Detailed Data:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems store current and detailed data. The data is constantly updated in real-time as
+                            transactions occur, and the focus is on ensuring accuracy and integrity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Workload:</b></p>
+
+                <p><b>Read and Write Operations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems handle a high volume of read and write operations. These transactions are
+                            typically short and involve accessing and updating individual records.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Response Time:</b></p>
+
+                <p><b>Low Latency:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems prioritize low latency, aiming for quick response times to individual
+                            transactions. The goal is to efficiently process a large number of small, transactional
+                            requests.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Concurrency Control:</b></p>
+
+                <p><b>Concurrency Management:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLTP systems implement concurrency control mechanisms to manage multiple users concurrently
+                            accessing and updating data without causing conflicts.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Example:</b></p>
+
+                <p><b>E-commerce Order Processing System:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>An OLTP system for an e-commerce platform manages online orders, inventory, and customer
+                            information in real-time.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>OLAP (Online Analytical Processing):</h4><br>
+
+                <p><b>1. Purpose:</b></p>
+
+                <p><b>Analytical Processing:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems are designed for complex data analysis and reporting. They support queries that
+                            involve aggregations, comparisons, and trends to provide insights into business performance.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Database Design:</b></p>
+
+                <p><b>Denormalized or Star Schema:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP databases often use denormalized or star schema designs to facilitate efficient
+                            querying and analysis. This structure optimizes the retrieval of aggregated data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Characteristics:</b></p>
+
+                <p><b>Historical and Summarized Data:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems store historical and summarized data. The data is often pre-aggregated to
+                            support analytical queries, and historical trends are important for decision-making.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Workload:</b></p>
+
+                <p><b>Complex Queries:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems handle complex queries that involve aggregations, grouping, and calculations.
+                            These queries analyze large datasets to provide insights into trends and patterns.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Response Time:</b></p>
+
+                <p><b>Variable Latency:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems have a variable response time. The focus is on providing in-depth analysis, and
+                            users are willing to wait longer for complex queries that generate detailed reports.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Concurrency Control:</b></p>
+
+                <p><b>Read-Optimized:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>OLAP systems are read-optimized, as the primary workload involves querying and analyzing
+                            data. They are not designed for high-concurrency write operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Example:</b></p>
+
+                <p><b>Business Intelligence Dashboard:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>An OLAP system might be used to analyze sales data over time, providing insights into
+                            regional performance, product trends, and other business metrics.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>OLTP vs. OLAP Comparison:</h4><br>
+
+                <p><b>1. Use Case:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Suited for operational tasks, day-to-day transaction processing.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Suited for analytical tasks, business intelligence, and decision support.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Data Structure:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Normalized schema to ensure data consistency.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Denormalized or star schema to optimize analytical queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Data Characteristics:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Current and detailed data for real-time transaction processing.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Historical and summarized data for in-depth analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Workload:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Read and write operations for transactional processing.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Complex queries for analytical processing.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Response Time:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Low latency, quick response times for individual transactions.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Variable response times, longer wait times for complex analytical queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Concurrency Control:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Concurrency management for high-volume, concurrent transactions.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Read-optimized with less emphasis on high-concurrency write operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Examples:</b></p>
+
+                <p><b>OLTP:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>E-commerce order processing system.</li>
+
+                        <li><b>OLAP:</b></li>
+
+                        <li>Business intelligence dashboard for sales analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>In summary, OLTP systems are optimized for transactional workloads and real-time data processing,
+                    while OLAP systems are geared towards analytical processing, providing insights through complex
+                    queries and reporting. Many organizations use both OLTP and OLAP systems to meet their operational
+                    and analytical needs.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Fact Tables:</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A fact table is a central table in a data warehouse schema that contains quantitative data
+                            (facts) about a business process or event. It typically includes numerical measures and
+                            foreign keys that link to dimension tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Key Characteristics:</b></p>
+
+                <p><b>Measures:</b> Numeric values or metrics that represent the performance or characteristics of the
+                    business process, such as sales revenue, quantity sold, or profit.</p>
+
+                <p><b>Foreign Keys:</b> Links to dimension tables, connecting the fact table to descriptive attributes
+                    stored in those dimensions.</p>
+
+                <p><b>Granularity:</b> Defines the level of detail at which facts are recorded. Granularity can vary
+                    based on business requirements.</p>
+
+                <p><b>3. Components of a Fact Table:</b></p>
+
+                <p><b>Primary Key:</b> A primary key that uniquely identifies each record in the fact table.</p>
+
+                <p><b>Foreign Keys:</b> Links to the primary keys in dimension tables, forming relationships between the
+                    fact table and dimension tables.</p>
+
+                <p><b>Measures:</b> Numeric values representing the quantitative aspects of the business process.</p>
+
+                <p><b>Date/Time Stamps:</b> Timestamps indicating when the business events occurred.</p>
+
+                <p><b>4. Types of Measures:</b></p>
+
+                <p><b>Additive Measures:</b> Measures that can be aggregated across all dimensions. For example, sales
+                    revenue is additive because it can be summed across different products, customers, and time periods.
+                </p>
+
+                <p><b>Semi-Additive Measures:</b> Measures that can be aggregated across some dimensions but not all. An
+                    example is a bank account balance, which can be summed across customers but not across time.</p>
+
+                <p><b>Non-Additive Measures:</b> Measures that cannot be aggregated. Ratios or percentages are examples
+                    of non-additive measures.</p>
+
+                <p><b>5. Grain of the Fact Table:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The grain of a fact table defines the level of detail at which facts are recorded. For
+                            example, a sales fact table may have a daily, weekly, or monthly grain, depending on
+                            business requirements.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Fact Table Design:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Fact tables are designed to support efficient querying and reporting. They are often
+                            denormalized for performance reasons, containing redundant data to minimize the need for
+                            joins during analysis.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Dimensions in Fact Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Fact tables have foreign keys that link to dimension tables. These dimensions provide
+                            context and descriptive attributes to the quantitative measures in the fact table.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>8. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In a retail data warehouse, a fact table for sales transactions might include measures like
+                            sales amount, quantity sold, and discount. It would have foreign keys linking to dimension
+                            tables for products, customers, time, and locations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>9. Fact Table Types:</b></p>
+
+                <p><b>Transaction Fact Table:</b> Records individual business transactions at the most detailed level.
+                </p>
+
+                <p><b>Snapshot Fact Table:</b> Captures a snapshot of business metrics at a specific point in time.</p>
+
+                <p><b>Cumulative Fact Table:</b> Aggregates values over a period, such as cumulative sales for a month.
+                </p>
+
+                <p><b>10. Aggregate Fact Tables:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Aggregate fact tables store pre-aggregated values to improve query performance for summary
+                            or aggregated queries. They are often used for large datasets where querying the detailed
+                            fact table might be computationally expensive.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Usage in Business Intelligence:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Fact tables are fundamental to business intelligence and data analysis. They serve as the
+                            primary source for creating reports, dashboards, and analytics that provide insights into
+                            business performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Fact Table Modeling Considerations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Considerations include choosing the appropriate grain, selecting the right measures, and
+                            optimizing the structure for query performance. Design decisions should align with business
+                            requirements and analytical needs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding the role and design principles of fact tables is crucial for building effective data
+                    warehouses that support meaningful analysis and reporting in business intelligence environments.</p>
+                <br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

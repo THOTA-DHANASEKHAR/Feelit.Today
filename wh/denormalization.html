@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Denormalization in Database Design:</h4>
+
+                <p>Denormalization is a database design technique where the goal is to improve the performance of a
+                    database system by introducing redundancy into the data model. Unlike normalization, which aims to
+                    minimize redundancy and achieve a specific set of normal forms, denormalization involves
+                    intentionally introducing redundancy by combining tables or including redundant data in order to
+                    optimize query performance. Here are key concepts and considerations related to denormalization:</p>
+
+                <h4>Key Concepts:</h4><br>
+
+                <p><b>1. Redundant Data:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalization involves duplicating data in one or more tables to avoid the need for
+                            complex joins and improve query performance. Redundant data is intentionally introduced to
+                            eliminate the need for frequent joins.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Simplified Queries:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>By introducing redundancy, queries can be simplified because data that would normally
+                            require joining multiple tables is now available in a single table.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Improved Read Performance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Read-intensive operations, such as reporting and analytics, can benefit from denormalization
+                            as they often involve complex queries that would be more resource-intensive with normalized
+                            data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Reduced Join Overhead:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalization reduces the overhead associated with joins, which can be computationally
+                            expensive. In scenarios where read performance is critical, denormalization can lead to
+                            faster query execution.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Data Warehousing and Reporting:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalization is commonly used in data warehousing environments where the focus is on
+                            analytical queries and reporting. Aggregates and summary tables are often denormalized to
+                            support efficient reporting.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Materialized Views:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Materialized views are a form of denormalization where the results of a query are
+                            precomputed and stored as a table. This precomputed table can be queried directly, avoiding
+                            the need to recompute results on every query.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Considerations and Drawbacks:</h4><br>
+
+                <p><b>1. Data Integrity:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Introducing redundancy can lead to challenges in maintaining data integrity, as updates,
+                            inserts, and deletes need to be carefully managed to avoid inconsistencies.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Increased Storage Requirements:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalization typically results in increased storage requirements due to the duplication
+                            of data. This can impact disk space usage and storage costs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Complex Update Operations:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Updates to denormalized data require careful coordination to ensure that redundant copies of
+                            data are kept in sync. Failure to manage updates correctly can lead to data inconsistencies.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Application Context:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The decision to denormalize should be based on the specific requirements of the application.
+                            It is often more suitable for read-heavy applications where query performance is a higher
+                            priority than update performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Balancing Normalization and Denormalization:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>In many cases, a balance between normalization and denormalization is necessary. Critical
+                            transactional data may be kept in a normalized form, while certain reporting tables are
+                            denormalized for improved query performance.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Indexing and Query Optimization:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalized tables may require additional indexing to support efficient query execution.
+                            Indexing strategies should be carefully considered to optimize both read and write
+                            operations.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>7. Application Maintenance:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Denormalized schemas can be more challenging to maintain, especially as the structure of the
+                            application evolves. Changes to the data model may require updates to denormalized tables
+                            and associated queries.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Denormalization is a performance optimization strategy that is best applied judiciously and in
+                    alignment with the specific use cases and requirements of the application. It is not a
+                    one-size-fits-all solution and should be carefully considered based on factors such as the nature of
+                    queries, update patterns, and the overall performance goals of the system.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

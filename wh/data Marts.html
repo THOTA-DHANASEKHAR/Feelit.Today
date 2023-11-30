@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div><br>
+                <h4>Data Marts:</h4>
+
+                <p><b>1. Definition:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A data mart is a subset of a data warehouse that is focused on a specific business line,
+                            functional area, or user community within an organization.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Purpose:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The primary purpose of a data mart is to provide a dedicated and specialized database that
+                            caters to the specific needs of a particular group of users, such as a department or
+                            business unit.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Scope:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data marts contain a subset of the data found in the overall data warehouse. They are
+                            tailored to the requirements of a specific set of users and are optimized for their
+                            analytical and reporting needs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Design:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>The design of a data mart is often simplified compared to the entire data warehouse. It
+                            typically includes a star schema or snowflake schema, focusing on a central fact table
+                            surrounded by dimension tables.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Autonomy:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data marts can function independently, allowing different departments or teams to have
+                            control over their specific data and reporting structures. This autonomy can lead to quicker
+                            implementation and adaptation to changing business needs.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>6. Types:</b></p>
+
+                <p><b>Dependent Data Mart:</b> Derived directly from the data warehouse, often using a subset of the
+                    enterprise data.</p>
+
+                <p><b>Independent Data Mart:</b> Developed separately from the data warehouse, with its own data sources
+                    and processes.</p>
+
+                <p><b>7. Advantages:</b></p>
+
+                <p><b>Specialization:</b> Tailored to the specific needs of a user group.</p>
+
+                <p><b>Performance:</b> Can offer improved query performance for targeted analytics.</p>
+
+                <p><b>Ease of Use:</b> Users within a specific department can work with data in a way that makes the
+                    most sense for their workflows.</p>
+
+                <p><b>8. Challenges:</b></p>
+
+                <p><b>Data Consistency:</b> Ensuring consistency with the overall data warehouse can be a challenge.</p>
+
+                <p><b>Integration:</b> Integrating data marts to provide a comprehensive view may require additional
+                    effort.</p>
+
+                <p><b>9. Data Mart vs. Data Warehouse:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>While a data warehouse serves as a comprehensive, centralized repository for an entire
+                            organization, data marts are decentralized and focused on specific business units or
+                            departments.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>10. Real-world Example:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>A sales data mart that contains information related to sales transactions, customer
+                            interactions, and inventory specific to the Sales department, allowing sales analysts to
+                            perform detailed analyses without being overwhelmed by irrelevant data.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>11. Role in Business Intelligence:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data marts play a crucial role in supporting business intelligence by providing targeted and
+                            relevant data to specific user groups, enabling them to make informed decisions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>12. Scalability:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Data marts can be scaled independently, allowing for targeted expansion based on the needs
+                            of a particular business unit without affecting the entire data warehouse.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Understanding the concept of data marts is essential for organizations looking to implement a
+                    scalable and flexible data architecture that meets the diverse analytical needs of different
+                    departments or teams within the company.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>

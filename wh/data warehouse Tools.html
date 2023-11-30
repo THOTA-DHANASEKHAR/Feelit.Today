@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="Images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>Data warehouse tools play a crucial role in the design, development, and management of data
+                    warehouses. These tools help organizations extract, transform, load (ETL), and analyze large volumes
+                    of data from diverse sources to support decision-making processes. Here are some popular data
+                    warehouse tools, categorized based on their primary functions:</p>
+
+                <h4>ETL Tools:</h4><br>
+
+                <p><b>1. Informatica PowerCenter:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Informatica PowerCenter is a comprehensive ETL tool that facilitates the extraction,
+                            transformation, and loading of data into data warehouses. It supports connectivity to
+                            various data sources and provides a visual interface for designing ETL workflows.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Microsoft SQL Server Integration Services (SSIS):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>SSIS is a part of the Microsoft SQL Server suite and is used for building ETL processes. It
+                            integrates with other Microsoft tools and databases, making it suitable for organizations
+                            using Microsoft technologies.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Apache NiFi:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Apache NiFi is an open-source ETL tool that provides a user-friendly interface for designing
+                            data flows. It supports the automation of data movement between systems and is often used in
+                            conjunction with big data technologies.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Talend:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Talend is an open-source ETL tool that offers a unified platform for data integration and
+                            management. It supports a wide range of data sources and targets, and it provides a
+                            code-free development environment.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. Oracle Data Integrator (ODI):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Oracle Data Integrator is an ETL tool by Oracle that is designed to work seamlessly with
+                            Oracle databases. It provides capabilities for data transformation, movement, and loading.
+                        </li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Data Warehousing Platforms:</h4><br>
+
+                <p><b>1. Amazon Redshift:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Amazon Redshift is a fully managed data warehouse service provided by AWS. It is known for
+                            its scalability and performance, making it suitable for large-scale data analytics.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Snowflake:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Snowflake is a cloud-based data warehousing platform that separates storage and compute
+                            resources, allowing for scalable and elastic data processing. It supports ANSI SQL and is
+                            compatible with various BI tools.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Google BigQuery:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Google BigQuery is a serverless data warehouse that enables super-fast SQL queries using the
+                            processing power of Google's infrastructure. It is designed for real-time analytics on large
+                            datasets.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Microsoft Azure Synapse Analytics (formerly SQL Data Warehouse):</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Azure Synapse Analytics is a cloud-based data warehouse service that integrates with other
+                            Microsoft Azure services. It supports both on-demand and provisioned resources for
+                            analytics.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>BI and Analytics Tools:</h4><br>
+
+                <p><b>1. Tableau:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Tableau is a powerful and widely used business intelligence (BI) tool that allows users to
+                            create interactive and shareable dashboards. It can connect to various data sources,
+                            including data warehouses.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. Power BI:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Microsoft Power BI is a cloud-based BI tool that enables users to visualize and share
+                            insights from their data. It integrates seamlessly with Microsoft Excel and other Microsoft
+                            services.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. QlikView/Qlik Sense:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>QlikView and Qlik Sense are data visualization and discovery tools that allow users to
+                            explore and visualize data. They use associative data modeling to enable in-memory data
+                            processing.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>4. Looker:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Looker is a modern BI and analytics platform that allows organizations to explore and
+                            analyze their data. It provides a modeling layer that simplifies data exploration.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>5. MicroStrategy:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>MicroStrategy is an enterprise-level BI platform that offers comprehensive analytics and
+                            mobility solutions. It supports various data sources, including data warehouses, and
+                            provides advanced analytics capabilities.</li>
+
+                    </ul>
+                </div><br>
+
+                <h4>Data Modeling Tools:</h4><br>
+
+                <p><b>1. Erwin Data Modeler:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Erwin Data Modeler is a tool for designing and visualizing data models. It supports both
+                            relational and non-relational databases and helps in maintaining data integrity.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>2. IBM InfoSphere Data Architect:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>IBM InfoSphere Data Architect is a data modeling tool that allows users to create, analyze,
+                            and visualize data models. It integrates with other IBM data management solutions.</li>
+
+                    </ul>
+                </div><br>
+
+                <p><b>3. Toad Data Modeler:</b></p>
+
+                <div class='liststyle'>
+                    <ul>
+
+                        <li>Toad Data Modeler is a tool that supports data modeling for both relational and
+                            non-relational databases. It helps in designing and maintaining database structures.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>These tools cater to different aspects of the data warehouse lifecycle, from data extraction and
+                    transformation to storage, analytics, and visualization. The choice of tools often depends on the
+                    specific requirements, existing infrastructure, and the preferences of the organization.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+    </div>
+    <script src="MyScript/script.js"></script>
+    <!-- Load necessary JS libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        var getclass = document.getElementById("getclass").textContent;
+        document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+    </script>
+</body>
+
+</html>
