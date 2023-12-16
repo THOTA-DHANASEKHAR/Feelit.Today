@@ -99,7 +99,7 @@ $(document).ready(function() {
 <a href='/SQL/subqueries'><li class='LeftSideIndex_Btn' id='subqueries' name='subqueries'>SQL Subqueries</li></a>
 
 <li class='LeftSideIndex_Btn_h'>Logical Operators</li>
-<a href='/logical_operators'><li class='LeftSideIndex_Btn' id='logical_operators' name='logical_operators'>SQL Logical Operators</li></a>
+<a href='/logical_operators'><li class='LeftSideIndex_Btn' id='logical operators' name='logical_operators'>SQL Logical Operators</li></a>
 <a href='/comparison_operators'><li class='LeftSideIndex_Btn' id='comparison_operators' name='comparison_operators'>SQL Comparison Operators</li></a>
 <a href='/and'><li class='LeftSideIndex_Btn' id='and' name='and'>SQL And</li></a>
 <a href='/or'><li class='LeftSideIndex_Btn' id='or' name='or'>SQL Or</li></a>
