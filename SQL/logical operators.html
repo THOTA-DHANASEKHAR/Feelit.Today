@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>SQL LOGICAL OPERATORS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>logical operators</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <h4>SQL LOGICAL OPERATORS</h4>
+                <p>SQL logical operators are used to combine multiple conditions in SQL queries to create more complex
+                    and flexible search criteria. They allow you to specify conditions that involve multiple expressions
+                    or columns and are typically used in the `WHERE` clause of SQL statements. The common SQL logical
+                    operators include:</p>
+
+                <br>
+                <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                    <thead class='table-secondary'>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </thead>
+                    <tr>
+                        <td>AND</td>
+                        <td>It returns `TRUE` only if all the conditions are `TRUE`.</td>
+                        <td><code>SELECT * FROM employees WHERE age >= 30 AND salary >= 50000;</code></td>
+                    </tr>
+                    <tr>
+                        <td>OR</td>
+                        <td>It returns `TRUE` if at least one of the conditions is `TRUE`.</td>
+                        <td><code>SELECT * FROM products WHERE category = 'Electronics' OR stock_quantity > 100;</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NOT</td>
+                        <td>This operator is used to negate a condition, making a `TRUE` condition `FALSE` and vice
+                            versa.</td>
+                        <td><code>SELECT * FROM customers WHERE NOT country = 'USA';</code></td>
+                    </tr>
+                </table>
+                <br>
+
+                <p>These logical operators are often used to create more sophisticated filtering conditions in SQL
+                    queries. Here are some examples of how they can be used:</p>
+                    <br>
+                    <h6><b>Table Name: </b>employees</h6>                    
+                    <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                        <thead class='table-secondary'>
+                            <tr style="text-align: left;">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>salary</th>
+                                <th>hire_dat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>50000</td>
+                                <td>2023-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>60000</td>
+                                <td>2023-01-02</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Charlie</td>
+                                <td>55000</td>
+                                <td>2023-01-03</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David</td>
+                                <td>70000</td>
+                                <td>2023-01-04</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br><hr><br>
+                    <p><b>1. AND Operator: </b> The `AND` operator is used to retrieve rows that satisfy both conditions.</p>
+                    <div class="code-container">
+                        <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                                class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i> Copy</span>
+                        </div>
+                        <pre
+                            class="side_border"><code class="language-sql">SELECT * 
+FROM employees 
+WHERE 
+salary > 55000 
+AND 
+hire_date >= '2023-01-03';</code></pre>
+                    </div><br>
+                    
+                    <h6>Result:</h6>
+                    <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                        <thead class='table-secondary'>
+                            <tr style="text-align: left;">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>salary</th>
+                                <th>hire_dat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td>David</td>
+                                <td>70000</td>
+                                <td>2023-01-04</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>This query retrieves employees who have a salary greater than 55000 and were hired on or after '2023-01-03'.</p>
+                    <br><br>
+                    
+                    <p><b>2. OR Operator: </b> The `OR` operator is used to retrieve rows that satisfy either of the conditions.</p>
+                    
+                    <div class="code-container">
+                        <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                                class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i> Copy</span>
+                        </div>
+                        <pre
+                            class="side_border"><code class="language-sql">SELECT * 
+FROM employees 
+WHERE salary > 60000 
+OR 
+hire_date < '2023-01-02';</code></pre>
+                    </div><br>
+                    
+                    <h6>Result:</h6>
+                    
+                    <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                        <thead class='table-secondary'>
+                            <tr style="text-align: left;">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>salary</th>
+                                <th>hire_dat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>50000</td>
+                                <td>2023-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bob</td>
+                                <td>60000</td>
+                                <td>2023-01-02</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David</td>
+                                <td>70000</td>
+                                <td>2023-01-04</td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                    <p>This query retrieves employees who have a salary greater than 60000 or were hired before '2023-01-02'.</p>
+                    <br><br>
+                    <p><b>3. NOT Operator</b> The `NOT` operator is used to negate a condition.</p>
+                    
+                    <div class="code-container">
+                        <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                                class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy"> </i> Copy</span>
+                        </div>
+                        <pre class="side_border"><code class="language-sql">SELECT * 
+FROM employees 
+WHERE 
+NOT salary == 60000;</code></pre>
+                    </div><br>
+                    
+                    <h6>Result:</h6>
+                    <table border="1" class="dataframe table-sm table-bordered dataframe table table-bordered">
+                        <thead class='table-secondary'>
+                            <tr style="text-align: left;">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>salary</th>
+                                <th>hire_dat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Alice</td>
+                                <td>50000</td>
+                                <td>2023-01-0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Charlie</td>
+                                <td>55000</td>
+                                <td>2023-01-0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David</td>
+                                <td>70000</td>
+                                <td>2023-01-03</td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                    <p>This query retrieves employees who do not have a salary equal to 60000.</p><br><br>
+                    
+                    <p>These logical operators allow you to create more complex conditions in your SQL queries, enabling you to filter and
+                        retrieve data based on various criteria. They are particularly useful when you need to combine multiple conditions
+                        to express the desired logic for your query.</p><br>
+                    <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+            </div>
+        </div>
+</div>
+        <script src="MyScript/script.js"></script>
+        <!-- Load necessary JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        </script>
+    
+</body>
+
+</html>
