@@ -346,10 +346,10 @@ var nextitem = index < button_list.length - 1 ? button_list[index + 1] : null;
 var a_buttons = "";
 
 if (previousitem !== null) {
-  a_buttons += `<a href="/${previousitem}" type="button"><button class="btn btn-success1"><i class='fas fa-arrow-left'></i> Previous </button></a><br><br><br>`;
+  a_buttons += `<a href="/SQL/${previousitem}" type="button"><button class="btn btn-success1"><i class='fas fa-arrow-left'></i> Previous </button></a><br><br><br>`;
 }
 if (nextitem !== null) {
-  a_buttons += `<a href="/${nextitem}" type="button"><button class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button></a>`;
+  a_buttons += `<a href="/SQL/${nextitem}" type="button"><button class="btn btn-success1">&nbsp;&nbsp;&nbsp; Next <i class='fas fa-arrow-right'></i>&nbsp;&nbsp;&nbsp; </button></a>`;
   }
 
 document.getElementById("next_nav_button").innerHTML = a_buttons;
