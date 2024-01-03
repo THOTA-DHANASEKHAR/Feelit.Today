@@ -94,7 +94,7 @@ $(document).ready(function() {
 <a href='/SQL/order by'><li class='LeftSideIndex_Btn' id='order by' name='order_by_clause'>SQL Order By Clause</li></a>
 <a href='/SQL/limit and offset'><li class='LeftSideIndex_Btn' id='limit and offset' name='limit_and_offset'>SQL Limit And Offset</li></a>
 <a href='/SQL/distinct'><li class='LeftSideIndex_Btn' id='distinct' name='distinct'>SQL Distinct</li></a>
-<a href='/SQL/alias'><li class='LeftSideIndex_Btn' id='alias' name='as_clause'>SQL As Clause</li></a>
+<a href='/SQL/alias'><li class='LeftSideIndex_Btn' id='alias' name='as_clause'>SQL Alias Clause</li></a>
 <a href='/SQL/aggregate functions'><li class='LeftSideIndex_Btn' id='aggregate_functions' name='aggregate_functions'>SQL Aggregate Functions</li></a>
 <a href='/SQL/subqueries'><li class='LeftSideIndex_Btn' id='subqueries' name='subqueries'>SQL Subqueries</li></a>
 
