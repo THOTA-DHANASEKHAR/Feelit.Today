@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="images/LOGO.png" type="logo">
+    <title>Feelit.Today</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---FOR USING jquery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="stylesheet" href="MyStyles/bootstrap.min.css">
+    <script defer src="MyScript/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="MyStyles/styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5854315391149266"
+        crossorigin="anonymous"></script>
+    <script src="MyScript/scripts.js"></script>
+
+</head>
+
+<body class="body">
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+    </div>
+    <div class="content">
+        <h3 id='getclass'>SQL_Syntax</h3>
+        <div>
+            <section id="navigation_bar"></section>
+        </div>
+        <div>
+            <section id="navigation_bar_botom"></section>
+        </div>
+        <div style="padding-top: 4rem">
+            <div id="mobile">
+                <div id="listofitems_mobile" class="sidenav" onclick="closeNav()"></div>
+                <div id="listofitems_mobile1"></div>
+            </div>
+
+            <div class="row " id="laptop">
+                <div class="col-2  LeftSideIndex" id="listofitems_Laptop">
+                </div>
+                <div class="col-10  RightSideIndex">
+                    <div class="row">
+                        <div class="col-10" id="listofitems_Laptop1"></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <footer id='footer' class=" text-light"></footer>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <!--start with your content-->
+            <div>
+                <p>In SQL, the `TOP` clause is used to limit the number of rows returned by a query. It is commonly used
+                    in Microsoft SQL Server and Sybase. The `TOP` clause allows you to specify the maximum number of
+                    rows to be included in the result set, which can be useful for purposes such as limiting the number
+                    of records returned or implementing pagination.</p>
+
+                <p>The basic syntax of the `TOP` clause is as follows:</p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre
+                        class="side_border"><code class="language-sql"> SELECT TOP (number_of_rows) column1, column2, ... FROM table_name WHERE condition;</code></pre>
+                </div><br>
+                <div class="ad-container">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5854315391149266" data-ad-slot="1234567890"
+                        data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class='liststyle'>
+                    <ul>
+
+                        <li><b>`number_of_rows`:</b> This is the maximum number of rows to be included in the result
+                            set.</li>
+
+                        <li><b>`column1, column2, ...`:</b> These are the columns you want to retrieve.</li>
+
+                        <li><b>`table_name`:</b> This is the name of the table from which you want to retrieve data.
+                        </li>
+
+                        <li><b>`condition`:</b> This is an optional condition that filters the rows before applying the
+                            `TOP` limit.</li>
+
+                    </ul>
+                </div><br>
+
+                <p>Here's an example of using the `TOP` clause in a SQL query:</p>
+
+                <div class="code-container">
+                    <div class="code-header"><span class="btn1 "><i class="left-copy-btn">Example:</i></span><span
+                            class="btn copy-btn shadow-none" onclick="copyCodeToClipboard(this)"><i class="fa fa-copy">
+                            </i> Copy</span></div>
+                    <pre
+                        class="side_border"><code class="language-sql"> SELECT TOP 5 ProductName, UnitPrice FROM Products ORDER BY UnitPrice DESC;</code></pre>
+                </div><br>
+<div class="ad-container">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5854315391149266" data-ad-slot="1234567890"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+                <p>In this example, the query retrieves the top 5 products with the highest unit prices from the
+                    "Products" table. The `ORDER BY` clause is used to specify the sorting order, and the `TOP` clause
+                    limits the result set to 5 rows.</p>
+
+                <p>Please note that the usage of `TOP` for limiting rows is specific to Microsoft SQL Server and related
+                    database systems. In other database management systems like MySQL, PostgreSQL, and Oracle, you would
+                    typically use the `LIMIT` clause to achieve similar functionality.</p>
+
+                <p>In Microsoft SQL Server, you can also use the `FETCH FIRST` clause, which provides similar
+                    functionality to `TOP`. The choice between `TOP` and `FETCH FIRST` may depend on the specific SQL
+                    Server version you are using.</p><br>
+                <hr>
+                <div class="d-flex justify-content-between" id="next_nav_button"></div>
+
+            </div>
+        </div>
+        </div>
+        <script src="MyScript/script.js"></script>
+        <!-- Load necessary JS libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-sql.min.js"></script>
+        <!-- Custom JS -->
+        <script>
+            var getclass = document.getElementById("getclass").textContent;
+            document.getElementById(getclass).style.backgroundColor = "#04aa6d";
+        </script>
+    
+</body>
+
+</html>
